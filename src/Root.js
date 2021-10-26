@@ -1,5 +1,7 @@
+import RootProvider from 'hoc/RootProvider';
+
 function Root() {
-  return <div></div>;
+  return <RootProvider>La Mia Passione Maltese</RootProvider>;
 }
 
 export default Root;
