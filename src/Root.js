@@ -1,5 +1,4 @@
 import RootProvider from 'hoc/RootProvider';
-// VIEWS
 import Home from 'views/Home/Home';
 
 function Root() {
