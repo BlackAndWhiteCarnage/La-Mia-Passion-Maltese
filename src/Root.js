@@ -1,7 +1,13 @@
 import RootProvider from 'hoc/RootProvider';
+// VIEWS
+import Home from 'views/Home/Home';
 
 function Root() {
-  return <RootProvider>La Mia Passione Maltese</RootProvider>;
+  return (
+    <RootProvider>
+      <Home />
+    </RootProvider>
+  );
 }
 
 export default Root;
