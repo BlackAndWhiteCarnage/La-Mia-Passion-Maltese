@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ContentWrapper from 'hoc/ContentWrapper';
 import aboutMeImage1 from 'assets/images/AboutMe1.png';
 import aboutMeImage2 from 'assets/images/AboutMe2.png';
@@ -9,13 +9,26 @@ import { useScroll } from 'helpers/useScroll';
 
 const ContentChunk = ({ text, image, className }) => {
   const [element, controls] = useScroll();
+  const ref = useRef();
+
+  const handleMove = (e) => {
+    ref.current.style.transition = `0.1s ease`;
+    let xAxis = (window.innerWidth / 5 - e.clientX) / 50;
+    let yAxis = (window.innerHeight / 5 - e.clientY) / 50;
+    ref.current.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+  };
+
+  const handleLeave = () => {
+    ref.current.style.transform = `none`;
+    ref.current.style.transition = `all 0.5s ease`;
+  };
 
   return (
-    <Wrapper variants={fadeAnim} animate={controls} initial='hidden' ref={element}>
+    <Wrapper variants={fadeAnim} animate={controls} initial='hidden' ref={element} onMouseMove={handleMove} onMouseLeave={handleLeave}>
       <Content className={className} variants={textAnim}>
         {text}
       </Content>
-      <Image src={image} variants={imgAnim} />
+      <Image src={image} variants={imgAnim} ref={ref} />
     </Wrapper>
   );
 };

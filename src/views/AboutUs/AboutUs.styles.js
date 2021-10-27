@@ -54,6 +54,7 @@ export const Content = styled(motion.div)`
 
 export const Image = styled(motion.img)`
   width: 100%;
+  transform-style: preserve-3d;
   @media screen and (max-width: 1200px) {
     grid-row-start: 1;
     justify-self: center;
