@@ -12,6 +12,7 @@ export const Wrapper = styled.nav`
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999999;
+  pointer-events: none;
   @media screen and (max-width: 1200px) {
     width: 90%;
   }

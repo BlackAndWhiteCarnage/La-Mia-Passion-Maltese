@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { Wrapper, NavigationWrapper, Hamburger, Line, Modal, DarkLayer, LinksWrapper, Link, SocialMediaWrapper, Icon } from './Navigation.styles';
 import facebookIcon from 'assets/icons/facebook-icon.svg';
 import emailIcon from 'assets/icons/email-icon.svg';
@@ -58,7 +57,5 @@ const Navigation = () => {
     </>
   );
 };
-
-Navigation.propTypes = {};
 
 export default Navigation;

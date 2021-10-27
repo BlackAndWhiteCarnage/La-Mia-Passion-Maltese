@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <ContentWrapper>
       <Wrapper>
-        <Header className={'xl large'} text={['La Mia', 'Passione', 'Maltese']} />
+        <Header className={'xl large'} text={['La Mia ', ' Passione ', ' Maltese']} textMobile={['La Mia', 'Passione', 'Maltese']} />
         <Image src={homeImage} variants={imageAnim} animate={controls} initial='hidden' ref={element} />
       </Wrapper>
     </ContentWrapper>

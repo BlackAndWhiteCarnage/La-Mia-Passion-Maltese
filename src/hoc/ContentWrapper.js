@@ -11,7 +11,6 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 9999999;
 `;
 
 const ContentWrapper = ({ children }) => {

@@ -14,6 +14,15 @@ export const Wrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   z-index: 1;
+  &.top {
+    transform: none;
+    top: -100px;
+    left: 0;
+    @media screen and (max-width: 680px) {
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
   &.large {
     width: 100%;
   }
@@ -71,7 +80,7 @@ export const Word = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 `;
 
 export const Letter = styled(motion.span)`

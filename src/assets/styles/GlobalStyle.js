@@ -11,6 +11,12 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
         background: ${({ theme }) => theme.colors.black};
         color: ${({ theme }) => theme.colors.white};
+        line-height: 35px;
+        letter-spacing: 3px;
+        @media screen and (max-width: 680px){
+            line-height: 25px;
+            letter-spacing: 2px;
+        }
     }
     ::-webkit-scrollbar {
         width: 10px;
