@@ -12,9 +12,11 @@ export const Wrapper = styled.nav`
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999999;
-  @media screen and (max-width: 1400px) {
-    height: 95%;
+  @media screen and (max-width: 1200px) {
     width: 90%;
+  }
+  @media screen and (max-width: 680px) {
+    height: 95%;
   }
 `;
 
@@ -22,6 +24,10 @@ export const NavigationWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  pointer-events: none;
+  &.toggle {
+    pointer-events: all;
+  }
 `;
 
 export const Hamburger = styled.button`
@@ -34,6 +40,7 @@ export const Hamburger = styled.button`
   cursor: pointer;
   border: none;
   background: none;
+  pointer-events: all !important;
   @media screen and (max-width: 1400px) {
     width: 35px;
     height: 25px;
@@ -124,7 +131,10 @@ export const Modal = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  pointer-events: none;
   &.toggle {
+    pointer-events: all;
     left: 0%;
     transition: 0.5s ease;
   }
@@ -141,6 +151,7 @@ export const LinksWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  pointer-events: none;
   @media screen and (max-width: 1400px) {
     justify-content: space-evenly;
     height: 85%;
@@ -154,6 +165,7 @@ export const LinksWrapper = styled.div`
     top: 50%;
     transform: translate(0, -50%);
     transition: 0.65s ease;
+    pointer-events: all;
     a {
       pointer-events: all;
       transition: 1s 0.5s ease;
@@ -208,11 +220,41 @@ export const DarkLayer = styled.div`
   right: 0%;
   width: 50%;
   height: 100%;
-  z-index: 99999;
+  z-index: 99999999;
   background: rgba(8, 8, 8, 30%);
   transition: 0.5s ease;
+  pointer-events: none;
   &.toggle {
+    pointer-events: all;
     top: 0%;
     transition: 0.5s 0.35s ease;
+  }
+`;
+
+export const SocialMediaWrapper = styled.div`
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  bottom: -10%;
+  left: 0%;
+  width: 220px;
+  opacity: 0;
+  transition: 0.25s ease;
+  @media screen and (max-width: 680px) {
+    width: 125px;
+  }
+  &.toggle {
+    bottom: 0%;
+    opacity: 1;
+    transition: 0.5s 0.5s ease;
+  }
+`;
+
+export const Icon = styled.img`
+  width: 25px;
+  height: 25px;
+  @media screen and (max-width: 1200px) {
+    width: 20px;
+    height: 20px;
   }
 `;

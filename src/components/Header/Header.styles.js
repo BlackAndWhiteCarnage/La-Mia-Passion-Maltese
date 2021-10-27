@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 // xl/l for font-size
 // large/small for width
 // wrap for flex-wrap
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -12,6 +13,7 @@ export const Wrapper = styled.div`
   height: auto;
   display: flex;
   align-items: center;
+  z-index: 1;
   &.large {
     width: 100%;
   }
@@ -72,4 +74,6 @@ export const Word = styled.div`
   justify-content: space-evenly;
 `;
 
-export const Letter = styled.span``;
+export const Letter = styled(motion.span)`
+  pointer-events: none;
+`;

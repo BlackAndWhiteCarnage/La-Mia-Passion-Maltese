@@ -12,4 +12,15 @@ export const GlobalStyle = createGlobalStyle`
         background: ${({ theme }) => theme.colors.black};
         color: ${({ theme }) => theme.colors.white};
     }
+    ::-webkit-scrollbar {
+        width: 10px;
+        background: ${({ theme }) => theme.colors.white};
+    }
+    ::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.colors.black};
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.colors.white};
+    }
 `;
