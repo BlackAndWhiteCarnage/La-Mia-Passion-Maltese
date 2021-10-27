@@ -19,6 +19,7 @@ export const Wrapper = styled(motion.div)`
     top: -100px;
     left: 0;
     @media screen and (max-width: 680px) {
+      top: -20px;
       left: 50%;
       transform: translate(-50%);
     }
