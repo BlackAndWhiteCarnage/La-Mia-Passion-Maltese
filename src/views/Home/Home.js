@@ -13,7 +13,7 @@ const Home = () => {
     <ContentWrapper>
       <Wrapper>
         <Header className={'xl large'} text={['La Mia', 'Passione', 'Maltese']} />
-        <Image src={homeImage} variants={imageAnim} animate='show' initial='hidden' />
+        <Image src={homeImage} variants={imageAnim} animate={controls} initial='hidden' ref={element} />
       </Wrapper>
     </ContentWrapper>
   );

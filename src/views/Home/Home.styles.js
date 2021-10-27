@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Wrapper = styled.div`
-  position: relative;
+  position: absolute;
   width: 80%;
   height: 90%;
   max-width: 1920px;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled(motion.img)`
-  position: fixed;
+  position: absolute;
   left: 50%;
   top: 50%;
   z-index: -1;

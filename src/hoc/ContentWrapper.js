@@ -11,7 +11,6 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 250px;
 `;
 
 const ContentWrapper = ({ children }) => {

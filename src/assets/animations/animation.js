@@ -34,3 +34,39 @@ export const imageAnim = {
     transition: { duration: 4, delay: 1 },
   },
 };
+
+export const fadeAnim = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1.5 },
+  },
+};
+
+export const imgAnim = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1 },
+  },
+};
+
+export const textAnim = {
+  hidden: {
+    opacity: 0,
+    scale: 0.8,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, delay: 0.5 },
+  },
+};
