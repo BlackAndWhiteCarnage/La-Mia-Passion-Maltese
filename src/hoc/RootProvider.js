@@ -5,11 +5,11 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from 'assets/styles/theme';
 import Navigation from 'components/Navigation/Navigation';
 
-const RootProvider = ({ children }) => {
+const RootProvider = ({ children, currentSection }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Navigation />
+      <Navigation currentSection={currentSection} />
       {children}
     </ThemeProvider>
   );

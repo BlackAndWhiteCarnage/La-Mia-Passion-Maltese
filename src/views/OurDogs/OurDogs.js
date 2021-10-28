@@ -1,39 +1,24 @@
 import React from 'react';
 import ContentWrapper from 'hoc/ContentWrapper';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import DogImage1 from 'assets/images/Dog1.png';
 import DogImage2 from 'assets/images/Dog2.png';
 import DogImage3 from 'assets/images/Dog3.png';
 import DogImage4 from 'assets/images/Dog4.png';
-import Header from 'components/Header/Header';
 import Dog from './components/Dog';
+import { Wrapper } from './OurDogs.styles';
 
-export const Wrapper = styled.div`
-  position: relative;
-  width: 65%;
-  height: 90%;
-  max-width: 1400px;
-  overflow-x: hidden;
-  padding-top: 200px;
-  overflow-x: hidden;
-  @media screen and (max-width: 1400px) {
-    width: 80%;
-  }
-`;
-
-const OurDogs = () => {
+const OurDogs = ({ setCurrentSection }) => {
   return (
-    <ContentWrapper>
+    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={3}>
       <Wrapper>
         <Dog
           className='xl large top'
           headerText={['Dilayla ', ' Tuches']}
           textMobile={['Dilayla', 'Tuches']}
           text='Emi była naszym pierwszym Maltanczykiem. Można ją opisać jednym słowem "Łobuz". Za młodu niezwykle energiczna i radosna. Zdejmowała papiloty
-        przed wystawami, jadła WSZYSTKO co się tylko dało i zawsze musiała się w czymś wytarzać. Najwięcej zabawnych historii mamy właśnie z nią. To
-        ona pokazała nam czym jest czysta radość na widok nieznanego gościa w domu. I to ona przeżyła nasze pierwsze wzloty i upadki na wystawach.
-        Teraz Emi jest już emerytką, która spędza czas na kanapie obserwując to co robią domownicy.'
+          przed wystawami, jadła WSZYSTKO co się tylko dało i zawsze musiała się w czymś wytarzać. Najwięcej zabawnych historii mamy właśnie z nią. To
+          ona pokazała nam czym jest czysta radość na widok nieznanego gościa w domu. I to ona przeżyła nasze pierwsze wzloty i upadki na wystawach.
+          Teraz Emi jest już emerytką, która spędza czas na kanapie obserwując to co robią domownicy.'
           image={DogImage1}
         />
         <Dog

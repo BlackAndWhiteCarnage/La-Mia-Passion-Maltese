@@ -7,8 +7,8 @@ import aboutMeImage4 from 'assets/images/AboutMe4.png';
 import { Wrapper } from './AboutUs.styles';
 import ContentChunk from './components/ContentChunk';
 
-const AboutUs = () => (
-  <ContentWrapper>
+const AboutUs = ({ setCurrentSection }) => (
+  <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={2}>
     <Wrapper>
       <ContentChunk
         text='Jesteśmy hodowlą mieszczącą się w Warszawie, zarejestrowaną w ZKwP Oddział Warszawa ul. Lubelska. W naszej hodowli są cztery suczki, w tym

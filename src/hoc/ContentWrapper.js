@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -13,8 +14,29 @@ export const Wrapper = styled.section`
   justify-content: center;
 `;
 
-const ContentWrapper = ({ children }) => {
-  return <Wrapper>{children}</Wrapper>;
+export const ThresholdWrapper = styled.section`
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 50vh;
+`;
+
+const ContentWrapper = ({ children, setCurrentSection, sectionIndex }) => {
+  const [elem, view] = useInView({ threshold: 1 });
+
+  useEffect(() => {
+    if (view) {
+      setCurrentSection(sectionIndex);
+    }
+  }, [view, setCurrentSection]);
+
+  return (
+    <Wrapper>
+      <ThresholdWrapper ref={elem} />
+      {children}
+    </Wrapper>
+  );
 };
 
 ContentWrapper.propTypes = {

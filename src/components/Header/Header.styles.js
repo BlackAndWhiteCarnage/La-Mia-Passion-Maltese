@@ -82,6 +82,7 @@ export const Word = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 `;
 
 export const Letter = styled(motion.span)`
