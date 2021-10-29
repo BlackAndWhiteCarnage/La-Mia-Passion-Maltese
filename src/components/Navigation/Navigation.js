@@ -68,13 +68,13 @@ const Navigation = ({ currentSection }) => {
           <Icon src={phoneIcon} />
         </SocialMediaWrapper>
         <LinksWrapper className={toggleModal && 'toggle'} onClick={toggleModalHandler}>
-          <Link>Strona Główna</Link>
-          <Link>O Hodowli</Link>
-          <Link>Nasze Psy</Link>
-          <Link>Wystawy</Link>
-          <Link>Kupno Szczeniaka</Link>
-          <Link>Faq</Link>
-          <Link>Kontakt</Link>
+          <Link className={currentSection === 1 && 'isActive'}>Strona Główna</Link>
+          <Link className={currentSection === 2 && 'isActive'}>O Hodowli</Link>
+          <Link className={currentSection === 3 && 'isActive'}>Nasze Psy</Link>
+          <Link className={currentSection === 4 && 'isActive'}>Wystawy</Link>
+          <Link className={currentSection === 5 && 'isActive'}>Kupno Szczeniaka</Link>
+          <Link className={currentSection === 6 && 'isActive'}>Faq</Link>
+          <Link className={currentSection === 7 && 'isActive'}>Kontakt</Link>
         </LinksWrapper>
       </Wrapper>
       <Modal className={toggleModal && 'toggle'} onClick={toggleModalHandler}></Modal>

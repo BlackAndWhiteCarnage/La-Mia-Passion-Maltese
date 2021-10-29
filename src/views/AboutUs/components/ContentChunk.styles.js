@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Wrapper = styled(motion.div)`
+  position: relative;
   width: 100%;
   height: auto;
   display: grid;
@@ -48,5 +49,23 @@ export const Image = styled(motion.img)`
     justify-self: center;
     width: auto;
     height: 350px;
+  }
+`;
+
+export const Number = styled(motion.p)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(300px, 20vw, 600px);
+  color: ${({ theme }) => theme.colors.darkGrey};
+  z-index: -1;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+  &.right {
+    left: unset;
+    right: 50%;
+    transform: translate(50%, -50%);
   }
 `;

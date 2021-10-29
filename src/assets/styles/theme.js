@@ -2,7 +2,7 @@ export const theme = {
   colors: {
     white: '#EEEEEE',
     black: '#090909',
-    darkGrey: '#3F3F3F',
+    darkGrey: '#101010',
   },
   fontSize: {
     xxl: '42px',

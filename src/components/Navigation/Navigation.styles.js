@@ -197,6 +197,20 @@ export const Link = styled.a`
     z-index: -1;
     transition: 0.25s ease;
   }
+  &.isActive {
+    letter-spacing: 5px;
+    transition: 0.25s 0.1s ease !important;
+    padding-left: 20px;
+    color: ${({ theme }) => theme.colors.black};
+    pointer-events: none !important;
+    @media screen and (max-width: 680px) {
+      padding: 10px;
+    }
+    &::before {
+      width: 100%;
+      transition: 0.25s 0.1s ease;
+    }
+  }
   @media screen and (min-width: 1200px) {
     &:hover {
       letter-spacing: 5px;
@@ -282,7 +296,7 @@ export const CurrentSection = styled.p`
   position: absolute;
   width: 100%;
   height: 100%;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.m};
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -290,7 +304,9 @@ export const CurrentSection = styled.p`
   opacity: 0;
   transition: 0.25s ease;
   white-space: nowrap;
+  transform: scale(1.2);
   &.show {
+    transform: scale(1);
     bottom: 0%;
     opacity: 1;
     transition: 0.25s ease;

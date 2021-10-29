@@ -2,9 +2,9 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { fadeAnim, imgAnim, textAnim } from 'assets/animations/animation';
 import { useScroll } from 'helpers/useScroll';
-import { Wrapper, Content, Image } from './ContentChunk.styles';
+import { Wrapper, Content, Image, Number } from './ContentChunk.styles';
 
-const ContentChunk = ({ text, image, className }) => {
+const ContentChunk = ({ text, image, className, number }) => {
   const [element, controls] = useScroll();
   const ref = useRef();
 
@@ -21,6 +21,7 @@ const ContentChunk = ({ text, image, className }) => {
 
   return (
     <Wrapper variants={fadeAnim} animate={controls} initial='hidden' ref={element} onMouseMove={handleMove} onMouseLeave={handleLeave}>
+      <Number className={className}>{number}</Number>
       <Content className={className} variants={textAnim}>
         {text}
       </Content>

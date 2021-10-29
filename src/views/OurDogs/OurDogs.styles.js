@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   height: 90%;
   max-width: 1400px;
   overflow-x: hidden;
-  padding-top: 200px;
+  padding-top: 100px;
   @media screen and (max-width: 1400px) {
     width: 80%;
   }

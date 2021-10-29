@@ -3,6 +3,7 @@ import RootProvider from 'hoc/RootProvider';
 import Home from 'views/Home/Home';
 import AboutUs from 'views/AboutUs/AboutUs';
 import OurDogs from 'views/OurDogs/OurDogs';
+import Exhibitions from 'views/Exhibitions/Exhibitions';
 
 function Root() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -12,6 +13,7 @@ function Root() {
       <Home setCurrentSection={setCurrentSection} />
       <AboutUs setCurrentSection={setCurrentSection} />
       <OurDogs setCurrentSection={setCurrentSection} />
+      <Exhibitions setCurrentSection={setCurrentSection} />
     </RootProvider>
   );
 }

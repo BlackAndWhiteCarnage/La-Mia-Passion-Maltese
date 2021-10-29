@@ -14,6 +14,7 @@ const AboutUs = ({ setCurrentSection }) => (
         text='Jesteśmy hodowlą mieszczącą się w Warszawie, zarejestrowaną w ZKwP Oddział Warszawa ul. Lubelska. W naszej hodowli są cztery suczki, w tym
             dwie emerytki. Każda z nich jest traktowana jak prawdziwy członek rodziny.'
         image={aboutMeImage1}
+        number={1}
       />
       <ContentChunk
         className='right'
@@ -21,14 +22,16 @@ const AboutUs = ({ setCurrentSection }) => (
             hodowla była na wysokim poziomie angażując się całym sercem. Oseski w naszej hodowli już w drugiej dobie rozpoczynają wczesnorozwojową
             stymulację neurologiczną.'
         image={aboutMeImage2}
+        number={2}
       />
       <ContentChunk
         text='Po 12-14 dniach gdy otworzą oczy i zaczynają słyszeć, rozpoczynamy stymulację dźwiękową która trwa do 12 tygodnia życia. W czwartym
             tygodniu zaczynamy się czesać, myć i suszyć. Zapraszam na mój profil na Facebooku, gdzie można zobaczyć skrawki naszego życia, obejżeć
             śmieszne momenty naszych maluchów, jak również poczytać o wielu ciekawostkach dotyczących rasy.'
         image={aboutMeImage3}
+        number={3}
       />
-      <ContentChunk className='right' text='Kochamy to co robimy i wychodzi nam to całkiem dobrze.' image={aboutMeImage4} />
+      <ContentChunk className='right' text='Kochamy to co robimy i wychodzi nam to całkiem dobrze.' image={aboutMeImage4} number={4} />
     </Wrapper>
   </ContentWrapper>
 );
