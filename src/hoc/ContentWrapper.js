@@ -22,7 +22,7 @@ export const ThresholdWrapper = styled.section`
   height: 50vh;
 `;
 
-const ContentWrapper = ({ children, setCurrentSection, sectionIndex }) => {
+const ContentWrapper = ({ children, setCurrentSection, sectionIndex, id }) => {
   const [elem, view] = useInView({ threshold: 1 });
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const ContentWrapper = ({ children, setCurrentSection, sectionIndex }) => {
   }, [view, setCurrentSection]);
 
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <ThresholdWrapper ref={elem} />
       {children}
     </Wrapper>
@@ -41,6 +41,9 @@ const ContentWrapper = ({ children, setCurrentSection, sectionIndex }) => {
 
 ContentWrapper.propTypes = {
   children: PropTypes.node.isRequired,
+  setCurrentSection: PropTypes.func.isRequired,
+  sectionIndex: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default ContentWrapper;

@@ -2,12 +2,13 @@ import React, { useState, useRef } from 'react';
 import Exhibition from './component/Exhibition';
 import ContentWrapper from 'hoc/ContentWrapper';
 import { year2015, year2016, year2017, year2020 } from 'data/exhibitionsData';
-import { Wrapper, ButtonsWrapper, Button, ExhibitionsWrapper } from './Exhibitions.styles';
+import { Wrapper, ButtonsWrapper, ExhibitionsWrapper } from './Exhibitions.styles';
+import Button from 'components/Button/Button';
 
 const Exhibitions = ({ setCurrentSection }) => {
   const [data, setData] = useState(year2015);
   const [toggle, setToggle] = useState(true);
-  const ref = useRef(null);
+  const ref2 = useRef(null);
 
   const changeDataHandler = (newData) => {
     setToggle(false);
@@ -16,7 +17,7 @@ const Exhibitions = ({ setCurrentSection }) => {
       setData(newData);
     }, 500);
 
-    ref.current.scrollIntoView({
+    ref2.current.scrollIntoView({
       behavior: 'smooth',
     });
 
@@ -26,13 +27,13 @@ const Exhibitions = ({ setCurrentSection }) => {
   };
 
   return (
-    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={4}>
+    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={4} id='exhibitions'>
       <Wrapper>
-        <ButtonsWrapper ref={ref}>
-          <Button onClick={() => changeDataHandler(year2015)}>2015</Button>
-          <Button onClick={() => changeDataHandler(year2016)}>2016</Button>
-          <Button onClick={() => changeDataHandler(year2017)}>2017</Button>
-          <Button onClick={() => changeDataHandler(year2020)}>2020</Button>
+        <ButtonsWrapper ref={ref2}>
+          <Button onClick={() => changeDataHandler(year2015)} className={data === year2015 && 'active'} text='2015' />
+          <Button onClick={() => changeDataHandler(year2016)} className={data === year2016 && 'active'} text='2016' />
+          <Button onClick={() => changeDataHandler(year2017)} className={data === year2017 && 'active'} text='2017' />
+          <Button onClick={() => changeDataHandler(year2020)} className={data === year2020 && 'active'} text='2020' />
         </ButtonsWrapper>
         <ExhibitionsWrapper className={toggle && 'toggle'}>
           {data.map((props, index) => (

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   width: 100%;
   margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   height: 100px;
   max-height: 50px;
-  overflow: hidden;
   transition: all 1s;
   @media screen and (max-width: 1200px) {
     max-height: 100px;
@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
 `;
 
 export const FaqQuestion = styled.button`
+  position: relative;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.colors.white};
   letter-spacing: 3px;
@@ -36,7 +37,29 @@ export const FaqQuestion = styled.button`
   width: 100%;
   z-index: 1;
   cursor: pointer;
-  padding-bottom: 10px;
+  transition: 0.5s ease;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: ${({ theme }) => theme.colors.white};
+    z-index: -1;
+    transition: 0.25s ease;
+  }
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      transition: 0.5s 0.1s ease !important;
+      letter-spacing: 5px;
+      color: ${({ theme }) => theme.colors.black};
+      &::before {
+        width: 100%;
+        transition: 0.25s 0.1s ease;
+      }
+    }
+  }
   @media screen and (max-width: 1400px) {
     font-size: ${({ theme }) => theme.fontSize.l};
   }

@@ -19,7 +19,7 @@ export const letterAnim = {
   },
 };
 
-export const imageAnim = {
+export const homePageImgAnim = {
   hidden: {
     opacity: 0,
     scale: 0.8,
@@ -31,7 +31,7 @@ export const imageAnim = {
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 4, delay: 1 },
+    transition: { duration: 2, delay: 1 },
   },
 };
 
@@ -43,7 +43,7 @@ export const fadeAnim = {
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1.5 },
+    transition: { duration: 0.5 },
   },
 };
 
@@ -56,17 +56,5 @@ export const imgAnim = {
     opacity: 1,
     scale: 1,
     transition: { duration: 1 },
-  },
-};
-
-export const textAnim = {
-  hidden: {
-    opacity: 0,
-    scale: 0.8,
-  },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 1, delay: 0.5 },
   },
 };

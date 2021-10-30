@@ -9,7 +9,7 @@ import { Wrapper } from './OurDogs.styles';
 
 const OurDogs = ({ setCurrentSection }) => {
   return (
-    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={3}>
+    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={3} id='ourDogs'>
       <Wrapper>
         <Dog
           className='xl large top'

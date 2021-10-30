@@ -6,7 +6,7 @@ import { Wrapper } from './Faq.styles';
 
 const Faq = ({ setCurrentSection }) => {
   return (
-    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={6}>
+    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={6} id='faq'>
       <Wrapper>
         {faqData.map((obj) => (
           <Question key={obj.question} {...obj} />

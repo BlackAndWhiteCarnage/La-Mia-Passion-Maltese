@@ -8,7 +8,7 @@ import { Wrapper } from './AboutUs.styles';
 import ContentChunk from './components/ContentChunk';
 
 const AboutUs = ({ setCurrentSection }) => (
-  <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={2}>
+  <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={2} id='aboutUs'>
     <Wrapper>
       <ContentChunk
         text='Jesteśmy hodowlą mieszczącą się w Warszawie, zarejestrowaną w ZKwP Oddział Warszawa ul. Lubelska. W naszej hodowli są cztery suczki, w tym

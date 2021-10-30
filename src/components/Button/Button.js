@@ -1,30 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
-export const Wrapper = styled.div`
-  position: relative;
-  width: 65%;
-  height: 90%;
-  max-width: 1400px;
-  overflow-x: hidden;
-  @media screen and (max-width: 1400px) {
-    width: 80%;
-  }
-`;
-
-export const ButtonsWrapper = styled(motion.div)`
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 100px;
-  @media screen and (max-width: 1200px) {
-    flex-wrap: wrap;
-  }
-`;
-
-export const Button = styled.button`
+export const Wrapper = styled.button`
   position: relative;
   display: flex;
   align-items: center;
@@ -38,6 +16,15 @@ export const Button = styled.button`
   transition: 0.5s ease;
   cursor: pointer;
   margin-bottom: 20px;
+  &.form {
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    @media screen and (max-width: 680px) {
+      font-size: ${({ theme }) => theme.fontSize.l};
+    }
+  }
   &::before {
     content: '';
     position: absolute;
@@ -77,15 +64,18 @@ export const Button = styled.button`
   }
 `;
 
-export const ExhibitionsWrapper = styled.div`
-  width: 100%;
-  min-height: 500px;
-  opacity: 0;
-  transition: 0.5s ease;
-  transform: scale(0.8);
-  &.toggle {
-    transform: scale(1);
-    transition: 0.5s ease;
-    opacity: 1;
-  }
-`;
+const Button = ({ text, className, onClick, type }) => {
+  return (
+    <Wrapper className={className} onClick={onClick} type={type}>
+      {text}
+    </Wrapper>
+  );
+};
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  type: PropTypes.string,
+};
+
+export default Button;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const Wrapper = styled.nav`
   position: fixed;
@@ -147,7 +148,6 @@ export const LinksWrapper = styled.div`
   top: 150%;
   width: 45%;
   height: 70%;
-  /* border: 1px solid yellow; */
   transition: 1s ease;
   display: flex;
   flex-direction: column;
@@ -175,7 +175,7 @@ export const LinksWrapper = styled.div`
   }
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize.m};
   opacity: 0;
