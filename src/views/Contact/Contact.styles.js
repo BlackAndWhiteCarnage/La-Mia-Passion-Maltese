@@ -29,22 +29,17 @@ export const Form = styled.form`
     background: none;
     width: 100%;
     transition: 0.5s ease;
+    :focus {
+      background: ${({ theme }) => theme.colors.white};
+      color: ${({ theme }) => theme.colors.black};
+      padding: 20px;
+      transition: 0.5s ease;
+      @media screen and (max-width: 680px) {
+        padding: 10px;
+      }
+    }
     @media screen and (max-width: 680px) {
       font-size: ${({ theme }) => theme.fontSize.s};
-    }
-  }
-  input:focus {
-    padding: 20px 0;
-    transition: 0.5s ease;
-    @media screen and (max-width: 680px) {
-      padding: 10px;
-    }
-  }
-  textarea:focus {
-    padding: 20px;
-    transition: 0.5s ease;
-    @media screen and (max-width: 680px) {
-      padding: 10px;
     }
   }
 `;

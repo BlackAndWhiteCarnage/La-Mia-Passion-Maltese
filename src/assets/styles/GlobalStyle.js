@@ -30,4 +30,8 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar-thumb {
         background: ${({ theme }) => theme.colors.white};
     }
+    ::selection{
+        background: ${({ theme }) => theme.colors.white};
+        color: ${({ theme }) => theme.colors.black};
+    }
 `;
