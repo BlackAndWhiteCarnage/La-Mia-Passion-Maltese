@@ -4,7 +4,7 @@ import { templateAnim, letterAnim } from 'assets/animations/animation';
 import { Wrapper, Word, Letter } from './Header.styles';
 import { useScroll } from 'helpers/useScroll';
 
-const Header = ({ text, className, textMobile }) => {
+const Header = ({ text, className, textMobile = text }) => {
   const [element, controls] = useScroll();
 
   const matchMedia = window.matchMedia('(max-width: 680px)').matches;

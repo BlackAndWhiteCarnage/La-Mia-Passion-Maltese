@@ -24,6 +24,14 @@ export const Wrapper = styled(motion.div)`
       transform: translate(-50%);
     }
   }
+  &.static {
+    position: static;
+    transform: none;
+    margin-bottom: 80px;
+    @media screen and (max-width: 680px) {
+      margin-bottom: 20px;
+    }
+  }
   &.large {
     width: 100%;
   }

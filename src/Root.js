@@ -4,6 +4,7 @@ import Home from 'views/Home/Home';
 import AboutUs from 'views/AboutUs/AboutUs';
 import OurDogs from 'views/OurDogs/OurDogs';
 import Exhibitions from 'views/Exhibitions/Exhibitions';
+import BuyingProcess from 'views/BuyingProcess/BuyingProcess';
 
 function Root() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -14,6 +15,7 @@ function Root() {
       <AboutUs setCurrentSection={setCurrentSection} />
       <OurDogs setCurrentSection={setCurrentSection} />
       <Exhibitions setCurrentSection={setCurrentSection} />
+      <BuyingProcess setCurrentSection={setCurrentSection} />
     </RootProvider>
   );
 }
