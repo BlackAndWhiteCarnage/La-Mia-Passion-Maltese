@@ -6,6 +6,7 @@ import OurDogs from 'views/OurDogs/OurDogs';
 import Exhibitions from 'views/Exhibitions/Exhibitions';
 import BuyingProcess from 'views/BuyingProcess/BuyingProcess';
 import Faq from 'views/Faq/Faq';
+import Contact from 'views/Contact/Contact';
 
 function Root() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -18,6 +19,7 @@ function Root() {
       <Exhibitions setCurrentSection={setCurrentSection} />
       <BuyingProcess setCurrentSection={setCurrentSection} />
       <Faq setCurrentSection={setCurrentSection} />
+      <Contact setCurrentSection={setCurrentSection} />
     </RootProvider>
   );
 }
