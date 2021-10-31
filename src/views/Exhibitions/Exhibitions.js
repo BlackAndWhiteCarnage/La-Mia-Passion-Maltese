@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
-import Exhibition from './component/Exhibition';
+import PropTypes from 'prop-types';
 import ContentWrapper from 'hoc/ContentWrapper';
-import { year2015, year2016, year2017, year2020 } from 'data/exhibitionsData';
-import { Wrapper, ButtonsWrapper, ExhibitionsWrapper } from './Exhibitions.styles';
+import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
+import Exhibition from './component/Exhibition';
 import Button from 'components/Button/Button';
+import { year2015, year2016, year2017, year2020 } from 'data/exhibitionsData';
+import { ButtonsWrapper, ExhibitionsWrapper } from './Exhibitions.styles';
 
 const Exhibitions = ({ setCurrentSection }) => {
   const [data, setData] = useState(year2015);
@@ -28,7 +30,7 @@ const Exhibitions = ({ setCurrentSection }) => {
 
   return (
     <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={4} id='exhibitions' className='white'>
-      <Wrapper>
+      <SectionItemsWrapper>
         <ButtonsWrapper ref={ref2}>
           <Button onClick={() => changeDataHandler(year2015)} className={`${data === year2015 && 'active'} white`} text='2015' />
           <Button onClick={() => changeDataHandler(year2016)} className={`${data === year2016 && 'active'} white`} text='2016' />
@@ -40,9 +42,13 @@ const Exhibitions = ({ setCurrentSection }) => {
             <Exhibition props={props} index={index} key={`${props.exhibitionName} ${index}`} />
           ))}
         </ExhibitionsWrapper>
-      </Wrapper>
+      </SectionItemsWrapper>
     </ContentWrapper>
   );
+};
+
+Exhibitions.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
 };
 
 export default Exhibitions;

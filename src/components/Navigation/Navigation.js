@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Wrapper,
-  NavigationWrapper,
-  Hamburger,
-  Line,
-  Modal,
-  DarkLayer,
-  LinksWrapper,
-  StyledLink,
-  SocialMediaWrapper,
-  Icon,
-  CurrentSectionWrapper,
-  InfoWrapper,
-  CurrentSection,
-} from './Navigation.styles';
+import PropTypes from 'prop-types';
+import Hamburger from 'components/Hamburger/Hamburger';
+import NavigationLinks from 'components/NavigationLinks/NavigationLinks';
+import CurrentSectionInfo from 'components/CurrentSectionInfo/CurrentSectionInfo';
 import facebookIcon from 'assets/icons/facebook-icon.svg';
 import emailIcon from 'assets/icons/email-icon.svg';
 import phoneIcon from 'assets/icons/phone-icon.svg';
 import logoIcon from 'assets/icons/logo-icon.svg';
+import { Wrapper, Modal, DarkLayer, SocialMediaWrapper, Icon } from './Navigation.styles';
 
 const Navigation = ({ currentSection }) => {
   const [toggleModal, setToggleModal] = useState(false);
@@ -34,119 +24,25 @@ const Navigation = ({ currentSection }) => {
   return (
     <>
       <Wrapper>
-        <CurrentSectionWrapper>
-          <InfoWrapper>
-            <CurrentSection className={currentSection === 1 && 'show'}>Strona Główna</CurrentSection>
-            <CurrentSection className={currentSection === 2 && 'show'}>O Hodowli</CurrentSection>
-            <CurrentSection className={currentSection === 3 && 'show'}>Nasze Psy</CurrentSection>
-            <CurrentSection className={currentSection === 4 && 'showWhite'}>Wystawy</CurrentSection>
-            <CurrentSection className={currentSection === 5 && 'show'}>Kupno Szczeniaka</CurrentSection>
-            <CurrentSection className={currentSection === 6 && 'showWhite'}>Faq</CurrentSection>
-            <CurrentSection className={currentSection === 7 && 'show'}>Kontakt</CurrentSection>
-          </InfoWrapper>
-        </CurrentSectionWrapper>
-        <NavigationWrapper onClick={toggleModalHandler} className={toggleModal && 'toggle'}>
-          <Hamburger onClick={toggleModalHandler}>
-            <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} top`}>
-              <div />
-              <div />
-            </Line>
-            <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} mid`}>
-              <div />
-              <div />
-              <div />
-            </Line>
-            <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} bot`}>
-              <div />
-              <div />
-              <div />
-            </Line>
-          </Hamburger>
-        </NavigationWrapper>
+        <CurrentSectionInfo currentSection={currentSection} />
+        <Hamburger toggleModalHandler={toggleModalHandler} toggleModal={toggleModal} currentSection={currentSection} />
         <SocialMediaWrapper className={toggleModal && 'toggle'}>
-          <Icon src={facebookIcon} />
-          <Icon src={emailIcon} />
-          <Icon src={phoneIcon} />
+          <Icon src={facebookIcon} alt='Facebook Icon' />
+          <Icon src={emailIcon} alt='Email Icon' />
+          <Icon src={phoneIcon} alt='Phone Call Icon' />
         </SocialMediaWrapper>
-        <LinksWrapper className={toggleModal && 'toggle'} onClick={toggleModalHandler}>
-          <StyledLink
-            className={currentSection === 1 && 'isActive'}
-            onClick={toggleModalHandler}
-            to='home'
-            duration={1500}
-            smooth={true}
-            ignoreCancelEvents={true}
-          >
-            Strona Główna
-          </StyledLink>
-          <StyledLink
-            className={currentSection === 2 && 'isActive'}
-            onClick={toggleModalHandler}
-            to='aboutUs'
-            duration={1500}
-            smooth={true}
-            ignoreCancelEvents={true}
-          >
-            O Hodowli
-          </StyledLink>
-          <StyledLink
-            className={currentSection === 3 && 'isActive'}
-            onClick={toggleModalHandler}
-            to='ourDogs'
-            duration={1500}
-            smooth={true}
-            ignoreCancelEvents={true}
-          >
-            Nasze Psy
-          </StyledLink>
-          <StyledLink
-            className={currentSection === 4 && 'isActive'}
-            onClick={toggleModalHandler}
-            to='exhibitions'
-            duration={1500}
-            smooth={true}
-            ignoreCancelEvents={true}
-          >
-            Wystawy
-          </StyledLink>
-          <StyledLink
-            className={currentSection === 5 && 'isActive'}
-            onClick={toggleModalHandler}
-            to='buyingProcess'
-            duration={1500}
-            smooth={true}
-            ignoreCancelEvents={true}
-          >
-            Kupno Szczeniaka
-          </StyledLink>
-          <StyledLink
-            className={currentSection === 6 && 'isActive'}
-            onClick={toggleModalHandler}
-            to='faq'
-            duration={1500}
-            smooth={true}
-            ignoreCancelEvents={true}
-          >
-            Faq
-          </StyledLink>
-          <StyledLink
-            className={currentSection === 7 && 'isActive'}
-            onClick={toggleModalHandler}
-            to='contact'
-            duration={1500}
-            smooth={true}
-            ignoreCancelEvents={true}
-          >
-            Kontakt
-          </StyledLink>
-        </LinksWrapper>
+        <NavigationLinks toggleModal={toggleModal} toggleModalHandler={toggleModalHandler} currentSection={currentSection} />
       </Wrapper>
       <Modal className={toggleModal && 'toggle'} onClick={toggleModalHandler}></Modal>
       <DarkLayer className={toggleModal && 'toggle'} onClick={toggleModalHandler}>
-        <img src={logoIcon} />
+        <img src={logoIcon} alt='La Mia Passione Maltese Logo' />
       </DarkLayer>
     </>
   );
+};
+
+Navigation.propTypes = {
+  currentSection: PropTypes.number.isRequired,
 };
 
 export default Navigation;

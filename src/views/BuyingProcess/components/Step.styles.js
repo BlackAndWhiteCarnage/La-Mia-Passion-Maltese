@@ -13,8 +13,10 @@ export const Wrapper = styled(motion.div)`
     margin-bottom: 150px;
   }
   font-size: ${({ theme }) => theme.fontSize.m};
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 1600px) {
     font-size: ${({ theme }) => theme.fontSize.s};
+  }
+  @media screen and (max-width: 680px) {
     width: 100%;
     margin: 100px 0;
   }
@@ -31,12 +33,12 @@ export const List = styled.ul`
     display: flex;
     align-items: center;
     line-height: normal;
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 1600px) {
       font-size: ${({ theme }) => theme.fontSize.xs};
     }
     &:first-child {
       margin-top: 50px;
     }
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 `;

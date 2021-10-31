@@ -1,19 +1,6 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
-export const ButtonsWrapper = styled(motion.div)`
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 100px;
-  @media screen and (max-width: 1200px) {
-    flex-wrap: wrap;
-  }
-`;
-
-export const Button = styled.button`
+export const Wrapper = styled.button`
   position: relative;
   display: flex;
   align-items: center;
@@ -21,12 +8,29 @@ export const Button = styled.button`
   font-size: ${({ theme }) => theme.fontSize.xxl};
   background: none;
   border: none;
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
   letter-spacing: 30px;
   text-indent: 30px;
   transition: 0.5s ease;
   cursor: pointer;
   margin-bottom: 20px;
+  &.white {
+    color: ${({ theme }) => theme.colors.black};
+  }
+  &.form {
+    width: 100%;
+    margin: 0;
+    margin-top: 50px;
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    @media screen and (max-width: 1600px) {
+      font-size: ${({ theme }) => theme.fontSize.l};
+    }
+  }
+  &.white {
+    &::before {
+      background: ${({ theme }) => theme.colors.black};
+    }
+  }
   &::before {
     content: '';
     position: absolute;
@@ -34,7 +38,7 @@ export const Button = styled.button`
     top: 0;
     height: 100%;
     width: 0%;
-    background: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.white};
     z-index: -1;
     transition: 0.25s ease;
   }
@@ -49,6 +53,9 @@ export const Button = styled.button`
       width: 100%;
       transition: 0.25s 0.1s ease;
     }
+    &.white {
+      color: ${({ theme }) => theme.colors.white};
+    }
   }
   @media screen and (min-width: 1200px) {
     &:hover {
@@ -58,23 +65,14 @@ export const Button = styled.button`
         width: 100%;
         transition: 0.25s 0.1s ease;
       }
+      &.white {
+        color: ${({ theme }) => theme.colors.white};
+      }
     }
   }
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 1600px) {
     width: 100%;
+    padding: 10px;
     font-size: ${({ theme }) => theme.fontSize.l};
-  }
-`;
-
-export const ExhibitionsWrapper = styled.div`
-  width: 100%;
-  min-height: 500px;
-  opacity: 0;
-  transition: 0.5s ease;
-  transform: scale(0.8);
-  &.toggle {
-    transform: scale(1);
-    transition: 0.5s ease;
-    opacity: 1;
   }
 `;

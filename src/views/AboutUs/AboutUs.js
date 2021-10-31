@@ -1,15 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContentWrapper from 'hoc/ContentWrapper';
+import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
+import ContentChunk from './components/ContentChunk';
 import aboutMeImage1 from 'assets/images/AboutMe1.png';
 import aboutMeImage2 from 'assets/images/AboutMe2.png';
 import aboutMeImage3 from 'assets/images/AboutMe3.png';
 import aboutMeImage4 from 'assets/images/AboutMe4.png';
-import { Wrapper } from './AboutUs.styles';
-import ContentChunk from './components/ContentChunk';
 
 const AboutUs = ({ setCurrentSection }) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={2} id='aboutUs'>
-    <Wrapper>
+    <SectionItemsWrapper>
       <ContentChunk
         text='Jesteśmy hodowlą mieszczącą się w Warszawie, zarejestrowaną w ZKwP Oddział Warszawa ul. Lubelska. W naszej hodowli są cztery suczki, w tym
             dwie emerytki. Każda z nich jest traktowana jak prawdziwy członek rodziny.'
@@ -32,8 +33,12 @@ const AboutUs = ({ setCurrentSection }) => (
         number={3}
       />
       <ContentChunk className='right' text='Kochamy to co robimy i wychodzi nam to całkiem dobrze.' image={aboutMeImage4} number={4} />
-    </Wrapper>
+    </SectionItemsWrapper>
   </ContentWrapper>
 );
+
+AboutUs.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
+};
 
 export default AboutUs;

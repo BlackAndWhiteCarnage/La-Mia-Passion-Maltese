@@ -37,6 +37,7 @@ const Header = ({ text, className, textMobile = text }) => {
 
 Header.propTypes = {
   text: PropTypes.array.isRequired,
+  textMobile: PropTypes.array,
   className: PropTypes.string.isRequired,
 };
 

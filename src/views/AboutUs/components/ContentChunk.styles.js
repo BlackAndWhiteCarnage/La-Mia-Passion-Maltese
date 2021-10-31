@@ -22,15 +22,15 @@ export const Content = styled(motion.div)`
   display: flex;
   align-items: center;
   grid-row-start: 1;
+  @media screen and (max-width: 1600px) {
+    font-size: ${({ theme }) => theme.fontSize.s};
+  }
   @media screen and (max-width: 1200px) {
     grid-column-start: 1;
     grid-row-start: 2;
     text-align: center !important;
     display: flex;
     justify-content: center;
-  }
-  @media screen and (max-width: 680px) {
-    font-size: ${({ theme }) => theme.fontSize.s};
   }
   &.right {
     grid-column-start: 2;

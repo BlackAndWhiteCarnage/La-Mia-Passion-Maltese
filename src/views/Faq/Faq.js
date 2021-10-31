@@ -1,19 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContentWrapper from 'hoc/ContentWrapper';
-import { faqData } from 'data/faqData';
+import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import Question from './components/Question';
-import { Wrapper } from './Faq.styles';
+import { faqData } from 'data/faqData';
 
-const Faq = ({ setCurrentSection }) => {
-  return (
-    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={6} id='faq' className='white'>
-      <Wrapper>
-        {faqData.map((obj) => (
-          <Question key={obj.question} {...obj} />
-        ))}
-      </Wrapper>
-    </ContentWrapper>
-  );
+const Faq = ({ setCurrentSection }) => (
+  <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={6} id='faq' className='white'>
+    <SectionItemsWrapper className='overflowHidden'>
+      {faqData.map((obj) => (
+        <Question key={obj.question} {...obj} />
+      ))}
+    </SectionItemsWrapper>
+  </ContentWrapper>
+);
+
+Faq.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
 };
 
 export default Faq;

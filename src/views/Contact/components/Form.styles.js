@@ -1,20 +1,6 @@
 import styled, { keyframes } from 'styled-components';
-import { motion } from 'framer-motion';
 
-export const Wrapper = styled(motion.div)`
-  position: relative;
-  width: 65%;
-  height: 90%;
-  max-width: 1400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media screen and (max-width: 1400px) {
-    width: 80%;
-  }
-`;
-
-export const Form = styled.form`
+export const Wrapper = styled.form`
   position: relative;
   width: 100%;
   display: flex;
@@ -37,7 +23,7 @@ export const Form = styled.form`
         padding: 10px;
       }
     }
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 1600px) {
       font-size: ${({ theme }) => theme.fontSize.s};
     }
   }
@@ -47,7 +33,7 @@ export const Label = styled.label`
   width: 100%;
   margin-bottom: 35px;
   font-size: ${({ theme }) => theme.fontSize.xl};
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 1600px) {
     font-size: ${({ theme }) => theme.fontSize.l};
   }
 `;
@@ -58,7 +44,7 @@ export const Input = styled.input`
   margin-bottom: 100px;
   outline: none;
   padding: 10px 0;
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 1600px) {
     margin-bottom: 50px;
   }
   &.ERROR {
@@ -80,20 +66,6 @@ export const Textarea = styled.textarea`
   }
   &.VALID {
     background: #001502;
-  }
-`;
-
-export const Button = styled.button`
-  max-width: fit-content;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  background: none;
-  border: none;
-  color: ${({ theme }) => theme.colors.white};
-  margin-top: 50px;
-  letter-spacing: 3px;
-  cursor: pointer;
-  @media screen and (max-width: 680px) {
-    font-size: ${({ theme }) => theme.fontSize.m};
   }
 `;
 
@@ -128,7 +100,7 @@ export const WaitingWrapper = styled.div`
     background: ${({ theme }) => theme.colors.white};
     margin: 25px;
     border-radius: 50%;
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 1600px) {
       width: 30px;
       height: 30px;
     }

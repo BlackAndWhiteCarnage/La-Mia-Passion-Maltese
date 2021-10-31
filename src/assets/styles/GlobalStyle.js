@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.colors.white};
         line-height: 35px;
         letter-spacing: 3px;
-        @media screen and (max-width: 680px){
+        @media screen and (max-width: 1600px){
             line-height: 25px;
             letter-spacing: 2px;
         }

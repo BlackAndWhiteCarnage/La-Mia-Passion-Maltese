@@ -9,11 +9,11 @@ export const Wrapper = styled(motion.div)`
   height: 100px;
   max-height: 50px;
   transition: all 1s;
+  @media screen and (max-width: 1600px) {
+    margin-bottom: 25px;
+  }
   @media screen and (max-width: 1200px) {
     max-height: 100px;
-  }
-  @media screen and (max-width: 680px) {
-    margin-bottom: 25px;
   }
   &:last-child {
     margin: 0;
@@ -53,6 +53,7 @@ export const FaqQuestion = styled.button`
     &:hover {
       transition: 0.5s 0.1s ease !important;
       letter-spacing: 5px;
+      padding-left: 10px;
       color: ${({ theme }) => theme.colors.white};
       &::before {
         width: 100%;
@@ -60,7 +61,7 @@ export const FaqQuestion = styled.button`
       }
     }
   }
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: 1600px) {
     font-size: ${({ theme }) => theme.fontSize.l};
   }
 `;
@@ -72,7 +73,7 @@ export const FaqAnswer = styled.div`
   transition: 1s ease;
   opacity: 0;
   margin-top: 35px;
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 1600px) {
     font-size: ${({ theme }) => theme.fontSize.s};
     margin-top: 10px;
   }

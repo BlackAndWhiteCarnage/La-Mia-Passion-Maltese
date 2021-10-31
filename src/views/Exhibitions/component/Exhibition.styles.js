@@ -10,7 +10,7 @@ export const Wrapper = styled(motion.div)`
   border-bottom: 2px solid ${({ theme }) => theme.colors.darkGrey};
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.colors.black};
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 1600px) {
     font-size: ${({ theme }) => theme.fontSize.s};
     padding: 40px 0;
   }

@@ -14,6 +14,7 @@ export const Wrapper = styled.section`
   justify-content: center;
   z-index: 1;
   padding: 150px 0;
+  overflow-x: hidden;
   &.white {
     background: ${({ theme }) => theme.colors.white};
   }
@@ -47,7 +48,7 @@ const ContentWrapper = ({ children, setCurrentSection, sectionIndex, id, classNa
     if (view) {
       setCurrentSection(sectionIndex);
     }
-  }, [view, setCurrentSection]);
+  }, [view, setCurrentSection, sectionIndex]);
 
   return (
     <Wrapper id={id} className={className}>
@@ -66,6 +67,7 @@ ContentWrapper.propTypes = {
   setCurrentSection: PropTypes.func.isRequired,
   sectionIndex: PropTypes.number.isRequired,
   id: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default ContentWrapper;

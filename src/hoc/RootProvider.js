@@ -19,6 +19,7 @@ const RootProvider = ({ children, currentSection }) => {
 
 RootProvider.propTypes = {
   children: PropTypes.node.isRequired,
+  currentSection: PropTypes.number.isRequired,
 };
 
 export default RootProvider;
