@@ -5,7 +5,13 @@ export const Wrapper = styled(motion.div)`
   position: relative;
   width: 100%;
   height: auto;
-  margin: 150px 0;
+  margin-bottom: 450px;
+  &:first-child {
+    margin-top: 150px;
+  }
+  &:last-child {
+    margin-bottom: 150px;
+  }
   font-size: ${({ theme }) => theme.fontSize.m};
   @media screen and (max-width: 680px) {
     font-size: ${({ theme }) => theme.fontSize.s};

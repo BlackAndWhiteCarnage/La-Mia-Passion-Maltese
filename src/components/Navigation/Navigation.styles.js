@@ -43,6 +43,7 @@ export const Hamburger = styled.button`
   border: none;
   background: none;
   pointer-events: all !important;
+
   @media screen and (max-width: 1400px) {
     width: 35px;
     height: 25px;
@@ -53,6 +54,16 @@ export const Line = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  &.toggle {
+    div {
+      background: ${({ theme }) => theme.colors.white} !important;
+    }
+  }
+  &.white {
+    div {
+      background: ${({ theme }) => theme.colors.black};
+    }
+  }
   div {
     transition: 0.25s ease;
     height: 2px;

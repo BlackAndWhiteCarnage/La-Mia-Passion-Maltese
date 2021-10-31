@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Wrapper = styled(motion.div)`
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
   display: flex;
   flex-direction: column;
   height: 100px;
@@ -28,7 +28,7 @@ export const Wrapper = styled(motion.div)`
 export const FaqQuestion = styled.button`
   position: relative;
   font-size: ${({ theme }) => theme.fontSize.xl};
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   letter-spacing: 3px;
   text-align: left;
   background: none;
@@ -45,7 +45,7 @@ export const FaqQuestion = styled.button`
     top: 0;
     height: 100%;
     width: 0%;
-    background: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.black};
     z-index: -1;
     transition: 0.25s ease;
   }
@@ -53,7 +53,7 @@ export const FaqQuestion = styled.button`
     &:hover {
       transition: 0.5s 0.1s ease !important;
       letter-spacing: 5px;
-      color: ${({ theme }) => theme.colors.black};
+      color: ${({ theme }) => theme.colors.white};
       &::before {
         width: 100%;
         transition: 0.25s 0.1s ease;
@@ -67,6 +67,7 @@ export const FaqQuestion = styled.button`
 
 export const FaqAnswer = styled.div`
   font-size: ${({ theme }) => theme.fontSize.m};
+  color: ${({ theme }) => theme.colors.black};
   width: 100%;
   transition: 1s ease;
   opacity: 0;

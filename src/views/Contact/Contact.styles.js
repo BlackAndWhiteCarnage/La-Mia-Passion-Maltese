@@ -20,7 +20,6 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 200px;
   input,
   textarea {
     color: ${({ theme }) => theme.colors.white};

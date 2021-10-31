@@ -9,7 +9,7 @@ export const Wrapper = styled(motion.div)`
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   justify-items: space-between;
-  margin-bottom: 150px;
+  margin-bottom: 350px;
   @media screen and (max-width: 1200px) {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;

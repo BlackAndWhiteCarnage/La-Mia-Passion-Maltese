@@ -41,22 +41,22 @@ const Navigation = ({ currentSection }) => {
             <CurrentSection className={currentSection === 3 && 'show'}>Nasze Psy</CurrentSection>
             <CurrentSection className={currentSection === 4 && 'showWhite'}>Wystawy</CurrentSection>
             <CurrentSection className={currentSection === 5 && 'show'}>Kupno Szczeniaka</CurrentSection>
-            <CurrentSection className={currentSection === 6 && 'show'}>Faq</CurrentSection>
+            <CurrentSection className={currentSection === 6 && 'showWhite'}>Faq</CurrentSection>
             <CurrentSection className={currentSection === 7 && 'show'}>Kontakt</CurrentSection>
           </InfoWrapper>
         </CurrentSectionWrapper>
         <NavigationWrapper onClick={toggleModalHandler} className={toggleModal && 'toggle'}>
           <Hamburger onClick={toggleModalHandler}>
-            <Line className={`${toggleModal && 'toggle'} top`}>
+            <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} top`}>
               <div />
               <div />
             </Line>
-            <Line className={`${toggleModal && 'toggle'} mid`}>
+            <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} mid`}>
               <div />
               <div />
               <div />
             </Line>
-            <Line className={`${toggleModal && 'toggle'} bot`}>
+            <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} bot`}>
               <div />
               <div />
               <div />
