@@ -138,8 +138,7 @@ export const Modal = styled.div`
   width: 50%;
   height: 100%;
   z-index: 99999;
-  background: rgba(8, 8, 8, 80%);
-  backdrop-filter: blur(3px);
+  background: ${({ theme }) => theme.colors.black};
   transition: 0.5s 0.5s ease;
   display: flex;
   align-items: center;
