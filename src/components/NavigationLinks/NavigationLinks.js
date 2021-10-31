@@ -9,7 +9,7 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
       onClick={toggleModalHandler}
       to='home'
       duration={1500}
-      smooth={true}
+      smooth={'easeInOutQuart'}
       ignoreCancelEvents={true}
     >
       Strona Główna
@@ -19,7 +19,7 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
       onClick={toggleModalHandler}
       to='aboutUs'
       duration={1500}
-      smooth={true}
+      smooth={'easeInOutQuart'}
       ignoreCancelEvents={true}
     >
       O Hodowli
@@ -29,7 +29,7 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
       onClick={toggleModalHandler}
       to='ourDogs'
       duration={1500}
-      smooth={true}
+      smooth={'easeInOutQuart'}
       ignoreCancelEvents={true}
     >
       Nasze Psy
@@ -39,7 +39,7 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
       onClick={toggleModalHandler}
       to='exhibitions'
       duration={1500}
-      smooth={true}
+      smooth={'easeInOutQuart'}
       ignoreCancelEvents={true}
     >
       Wystawy
@@ -49,7 +49,7 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
       onClick={toggleModalHandler}
       to='buyingProcess'
       duration={1500}
-      smooth={true}
+      smooth={'easeInOutQuart'}
       ignoreCancelEvents={true}
     >
       Kupno Szczeniaka
@@ -59,7 +59,7 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
       onClick={toggleModalHandler}
       to='faq'
       duration={1500}
-      smooth={true}
+      smooth={'easeInOutQuart'}
       ignoreCancelEvents={true}
     >
       Faq
@@ -69,7 +69,7 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
       onClick={toggleModalHandler}
       to='contact'
       duration={1500}
-      smooth={true}
+      smooth={'easeInOutQuart'}
       ignoreCancelEvents={true}
     >
       Kontakt

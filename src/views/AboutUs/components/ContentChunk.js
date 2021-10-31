@@ -23,6 +23,7 @@ ContentChunk.propTypes = {
   text: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   className: PropTypes.string,
+  number: PropTypes.number.isRequired,
 };
 
 export default ContentChunk;

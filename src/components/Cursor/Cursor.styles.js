@@ -16,7 +16,7 @@ export const InvertDiv = styled.div`
   backdrop-filter: invert(100%);
   transition: 2s ease;
   &.section1 {
-    width: 100px;
+    width: 20vw;
     height: 200vh;
     transition: 2s ease;
   }
@@ -26,18 +26,18 @@ export const InvertDiv = styled.div`
     transition: 2s ease;
   }
   &.section3 {
-    width: 10vw;
+    width: 20vw;
     height: 200vh;
     transition: 2s ease;
   }
   &.section4 {
-    width: 50vw;
+    width: 60vw;
     height: 200vh;
     transition: 2s ease;
   }
   &.section5 {
     width: 200vw;
-    height: 50vh;
+    height: 70vh;
     transition: 2s ease;
   }
   &.section6 {
