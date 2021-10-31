@@ -17,6 +17,7 @@ import {
 import facebookIcon from 'assets/icons/facebook-icon.svg';
 import emailIcon from 'assets/icons/email-icon.svg';
 import phoneIcon from 'assets/icons/phone-icon.svg';
+import logoIcon from 'assets/icons/logo-icon.svg';
 
 const Navigation = ({ currentSection }) => {
   const [toggleModal, setToggleModal] = useState(false);
@@ -38,7 +39,7 @@ const Navigation = ({ currentSection }) => {
             <CurrentSection className={currentSection === 1 && 'show'}>Strona Główna</CurrentSection>
             <CurrentSection className={currentSection === 2 && 'show'}>O Hodowli</CurrentSection>
             <CurrentSection className={currentSection === 3 && 'show'}>Nasze Psy</CurrentSection>
-            <CurrentSection className={currentSection === 4 && 'show'}>Wystawy</CurrentSection>
+            <CurrentSection className={currentSection === 4 && 'showWhite'}>Wystawy</CurrentSection>
             <CurrentSection className={currentSection === 5 && 'show'}>Kupno Szczeniaka</CurrentSection>
             <CurrentSection className={currentSection === 6 && 'show'}>Faq</CurrentSection>
             <CurrentSection className={currentSection === 7 && 'show'}>Kontakt</CurrentSection>
@@ -141,7 +142,9 @@ const Navigation = ({ currentSection }) => {
         </LinksWrapper>
       </Wrapper>
       <Modal className={toggleModal && 'toggle'} onClick={toggleModalHandler}></Modal>
-      <DarkLayer className={toggleModal && 'toggle'} onClick={toggleModalHandler} />
+      <DarkLayer className={toggleModal && 'toggle'} onClick={toggleModalHandler}>
+        <img src={logoIcon} />
+      </DarkLayer>
     </>
   );
 };

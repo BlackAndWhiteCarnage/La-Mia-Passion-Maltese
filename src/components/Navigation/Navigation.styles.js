@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-scroll';
 
 export const Wrapper = styled.nav`
@@ -135,6 +135,10 @@ export const Modal = styled.div`
   justify-content: center;
   cursor: pointer;
   pointer-events: none;
+  @media screen and (max-width: 680px) {
+    width: 100%;
+    left: -100%;
+  }
   &.toggle {
     pointer-events: all;
     left: 0%;
@@ -157,6 +161,9 @@ export const LinksWrapper = styled.div`
     justify-content: space-evenly;
     height: 85%;
   }
+  @media screen and (max-width: 680px) {
+    width: 100%;
+  }
   a {
     transition: 0.5s ease;
     pointer-events: none;
@@ -177,7 +184,7 @@ export const LinksWrapper = styled.div`
 
 export const StyledLink = styled(Link)`
   position: relative;
-  font-size: ${({ theme }) => theme.fontSize.m};
+  font-size: ${({ theme }) => theme.fontSize.l};
   opacity: 0;
   width: 50%;
   height: 50px;
@@ -200,12 +207,9 @@ export const StyledLink = styled(Link)`
   &.isActive {
     letter-spacing: 5px;
     transition: 0.25s 0.1s ease !important;
-    padding-left: 20px;
+    padding-left: 10px;
     color: ${({ theme }) => theme.colors.black};
     pointer-events: none !important;
-    @media screen and (max-width: 680px) {
-      padding: 10px;
-    }
     &::before {
       width: 100%;
       transition: 0.25s 0.1s ease;
@@ -215,7 +219,7 @@ export const StyledLink = styled(Link)`
     &:hover {
       letter-spacing: 5px;
       transition: 0.25s 0.1s ease !important;
-      padding-left: 20px;
+      padding-left: 10px;
       color: ${({ theme }) => theme.colors.black};
       &::before {
         width: 100%;
@@ -224,8 +228,19 @@ export const StyledLink = styled(Link)`
     }
   }
   @media screen and (max-width: 1400px) {
-    font-size: ${({ theme }) => theme.fontSize.s};
     width: 100%;
+  }
+`;
+
+const pulse = keyframes`
+  0%{
+    transform: scale(0.8);
+  }
+  50%{
+    transform: scale(1) rotate(5deg);
+  }
+  100%{
+    transform: scale(0.8);
   }
 `;
 
@@ -236,9 +251,22 @@ export const DarkLayer = styled.div`
   width: 50%;
   height: 100%;
   z-index: 99999999;
-  background: rgba(8, 8, 8, 30%);
+  background: ${({ theme }) => theme.colors.white};
   transition: 0.5s ease;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 680px) {
+    display: none;
+  }
+  img {
+    width: 30%;
+    animation: ${pulse} 10s infinite;
+    @media screen and (max-width: 1200px) {
+      width: 50%;
+    }
+  }
   &.toggle {
     pointer-events: all;
     top: 0%;
@@ -256,10 +284,10 @@ export const SocialMediaWrapper = styled.div`
   opacity: 0;
   transition: 0.25s ease;
   @media screen and (max-width: 680px) {
-    width: 125px;
+    width: 100%;
   }
   &.toggle {
-    bottom: 0%;
+    bottom: 20px;
     opacity: 1;
     transition: 0.5s 0.5s ease;
   }
@@ -268,10 +296,6 @@ export const SocialMediaWrapper = styled.div`
 export const Icon = styled.img`
   width: 25px;
   height: 25px;
-  @media screen and (max-width: 1200px) {
-    width: 20px;
-    height: 20px;
-  }
 `;
 
 export const CurrentSectionWrapper = styled.div`
@@ -310,5 +334,12 @@ export const CurrentSection = styled.p`
     bottom: 0%;
     opacity: 1;
     transition: 0.25s ease;
+  }
+  &.showWhite {
+    transform: scale(1);
+    bottom: 0%;
+    opacity: 1;
+    transition: 0.25s ease;
+    color: ${({ theme }) => theme.colors.black};
   }
 `;

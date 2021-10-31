@@ -16,6 +16,9 @@ export const Wrapper = styled.button`
   transition: 0.5s ease;
   cursor: pointer;
   margin-bottom: 20px;
+  &.white {
+    color: ${({ theme }) => theme.colors.black};
+  }
   &.form {
     width: 100%;
     margin: 0;
@@ -23,6 +26,11 @@ export const Wrapper = styled.button`
     font-size: ${({ theme }) => theme.fontSize.xl};
     @media screen and (max-width: 680px) {
       font-size: ${({ theme }) => theme.fontSize.l};
+    }
+  }
+  &.white {
+    &::before {
+      background: ${({ theme }) => theme.colors.black};
     }
   }
   &::before {
@@ -47,6 +55,9 @@ export const Wrapper = styled.button`
       width: 100%;
       transition: 0.25s 0.1s ease;
     }
+    &.white {
+      color: ${({ theme }) => theme.colors.white};
+    }
   }
   @media screen and (min-width: 1200px) {
     &:hover {
@@ -55,6 +66,9 @@ export const Wrapper = styled.button`
       &::before {
         width: 100%;
         transition: 0.25s 0.1s ease;
+      }
+      &.white {
+        color: ${({ theme }) => theme.colors.white};
       }
     }
   }

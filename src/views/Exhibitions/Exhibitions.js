@@ -27,13 +27,13 @@ const Exhibitions = ({ setCurrentSection }) => {
   };
 
   return (
-    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={4} id='exhibitions'>
+    <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={4} id='exhibitions' className='white'>
       <Wrapper>
         <ButtonsWrapper ref={ref2}>
-          <Button onClick={() => changeDataHandler(year2015)} className={data === year2015 && 'active'} text='2015' />
-          <Button onClick={() => changeDataHandler(year2016)} className={data === year2016 && 'active'} text='2016' />
-          <Button onClick={() => changeDataHandler(year2017)} className={data === year2017 && 'active'} text='2017' />
-          <Button onClick={() => changeDataHandler(year2020)} className={data === year2020 && 'active'} text='2020' />
+          <Button onClick={() => changeDataHandler(year2015)} className={`${data === year2015 && 'active'} white`} text='2015' />
+          <Button onClick={() => changeDataHandler(year2016)} className={`${data === year2016 && 'active'} white`} text='2016' />
+          <Button onClick={() => changeDataHandler(year2017)} className={`${data === year2017 && 'active'} white`} text='2017' />
+          <Button onClick={() => changeDataHandler(year2020)} className={`${data === year2020 && 'active'} white`} text='2020' />
         </ButtonsWrapper>
         <ExhibitionsWrapper className={toggle && 'toggle'}>
           {data.map((props, index) => (

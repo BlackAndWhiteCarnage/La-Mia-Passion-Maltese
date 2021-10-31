@@ -32,7 +32,7 @@ export const Button = styled.button`
   font-size: ${({ theme }) => theme.fontSize.xxl};
   background: none;
   border: none;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.black};
   letter-spacing: 30px;
   text-indent: 30px;
   transition: 0.5s ease;
@@ -45,7 +45,7 @@ export const Button = styled.button`
     top: 0;
     height: 100%;
     width: 0%;
-    background: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.black};
     z-index: -1;
     transition: 0.25s ease;
   }

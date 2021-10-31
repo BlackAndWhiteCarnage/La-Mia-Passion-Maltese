@@ -12,17 +12,35 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  padding: 150px 0;
+  &.white {
+    background: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export const ThresholdWrapper = styled.section`
-  position: sticky;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   width: 1px;
-  height: 50vh;
+  height: 100%;
 `;
 
-const ContentWrapper = ({ children, setCurrentSection, sectionIndex, id }) => {
+const Threshold = styled.div`
+  position: relative;
+  height: 100%;
+  div {
+    position: sticky;
+    width: 1px;
+    top: 0;
+    left: 0;
+    height: 50vh;
+  }
+`;
+
+const ContentWrapper = ({ children, setCurrentSection, sectionIndex, id, className }) => {
   const [elem, view] = useInView({ threshold: 1 });
 
   useEffect(() => {
@@ -32,8 +50,12 @@ const ContentWrapper = ({ children, setCurrentSection, sectionIndex, id }) => {
   }, [view, setCurrentSection]);
 
   return (
-    <Wrapper id={id}>
-      <ThresholdWrapper ref={elem} />
+    <Wrapper id={id} className={className}>
+      <ThresholdWrapper>
+        <Threshold>
+          <div ref={elem} />
+        </Threshold>
+      </ThresholdWrapper>
       {children}
     </Wrapper>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import ContentWrapper from 'hoc/ContentWrapper';
 import { Wrapper, Form, Label, Input, Textarea, WaitingWrapper } from './Contact.styles';
 import { fadeAnim } from 'assets/animations/animation';
