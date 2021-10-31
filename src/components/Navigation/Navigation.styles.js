@@ -87,27 +87,3 @@ export const DarkLayer = styled.div`
     transition: 0.5s 0.35s ease;
   }
 `;
-
-export const SocialMediaWrapper = styled.div`
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  bottom: -10%;
-  left: 0%;
-  width: 220px;
-  opacity: 0;
-  transition: 0.25s ease;
-  @media screen and (max-width: 680px) {
-    width: 100%;
-  }
-  &.toggle {
-    bottom: 20px;
-    opacity: 1;
-    transition: 0.5s 0.5s ease;
-  }
-`;
-
-export const Icon = styled.img`
-  width: 25px;
-  height: 25px;
-`;

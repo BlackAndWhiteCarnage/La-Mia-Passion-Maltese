@@ -21,7 +21,12 @@ export const AccualHamburger = styled.button`
   border: none;
   background: none;
   pointer-events: all !important;
-
+  transition: 0.25s ease;
+  &:hover {
+    transition: 0.25s ease;
+    width: 60px;
+    height: 40px;
+  }
   @media screen and (max-width: 1400px) {
     width: 35px;
     height: 25px;
