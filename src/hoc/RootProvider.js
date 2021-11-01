@@ -10,9 +10,9 @@ const RootProvider = ({ children, currentSection }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      {children}
       <Cursor currentSection={currentSection} />
       <Navigation currentSection={currentSection} />
-      {children}
     </ThemeProvider>
   );
 };

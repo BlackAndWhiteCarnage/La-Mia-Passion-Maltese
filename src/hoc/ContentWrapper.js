@@ -14,7 +14,6 @@ export const Wrapper = styled.section`
   justify-content: center;
   z-index: 1;
   padding: 150px 0;
-  overflow-x: hidden;
   &.white {
     background: ${({ theme }) => theme.colors.white};
   }

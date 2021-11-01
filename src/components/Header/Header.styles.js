@@ -14,6 +14,7 @@ export const Wrapper = styled(motion.div)`
   display: flex;
   align-items: center;
   z-index: 1;
+  pointer-events: none;
   &.top {
     transform: none;
     top: -100px;

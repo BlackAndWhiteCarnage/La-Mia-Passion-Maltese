@@ -48,10 +48,10 @@ export const Input = styled.input`
     margin-bottom: 50px;
   }
   &.ERROR {
-    background: #1e0000;
+    border-bottom: 2px solid #700000;
   }
   &.VALID {
-    background: #001502;
+    border-bottom: 2px solid #00780c;
   }
 `;
 
@@ -62,10 +62,10 @@ export const Textarea = styled.textarea`
   padding: 10px;
   resize: none;
   &.ERROR {
-    background: #1e0000;
+    border: 2px solid #700000;
   }
   &.VALID {
-    background: #001502;
+    border: 2px solid #00780c;
   }
 `;
 

@@ -16,38 +16,38 @@ export const InvertDiv = styled.div`
   backdrop-filter: invert(100%);
   transition: 2s ease;
   &.section1 {
-    width: 20vw;
-    height: 200vh;
+    width: 50px;
+    height: 50px;
     transition: 2s ease;
   }
   &.section2 {
-    width: 200vw;
-    height: 5vh;
-    transition: 2s ease;
-  }
-  &.section3 {
-    width: 20vw;
+    width: 50px;
     height: 200vh;
     transition: 2s ease;
   }
+  &.section3 {
+    width: 200vw;
+    height: 50px;
+    transition: 2s ease;
+  }
   &.section4 {
-    width: 60vw;
+    width: 50vw;
     height: 200vh;
     transition: 2s ease;
   }
   &.section5 {
     width: 200vw;
-    height: 70vh;
+    height: 60vh;
     transition: 2s ease;
   }
   &.section6 {
-    width: 80vw;
+    width: 70vw;
     height: 200vh;
     transition: 2s ease;
   }
   &.section7 {
-    width: 20vw;
-    height: 200vh;
+    width: 200vw;
+    height: 40vh;
     transition: 2s ease;
   }
 `;

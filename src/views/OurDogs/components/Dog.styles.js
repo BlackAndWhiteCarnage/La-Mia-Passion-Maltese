@@ -54,6 +54,8 @@ export const Image = styled.img`
     grid-row-start: 1;
     justify-self: center;
     width: auto;
+    max-width: 100vw;
+    object-fit: cover;
     height: 350px;
   }
 `;

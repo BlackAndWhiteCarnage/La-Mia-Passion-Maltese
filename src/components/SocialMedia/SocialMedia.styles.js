@@ -29,6 +29,13 @@ export const IconWrapper = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.25s ease;
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      transform: rotate(-10deg);
+      transition: 0.25s ease;
+    }
+  }
   @media screen and (max-width: 680px) {
     width: 30px;
     height: 30px;
