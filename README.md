@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+<img src="./src/assets/icons/logo-icon.svg" alt="La Mia Passione Maltese logo" width='100%'/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<br />
 
-## Available Scripts
+# La Mia Passione Maltese - Website for my parents maltese breeding 🐶
 
-In the project directory, you can run:
+https://lamiapassionemaltese.pl/
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### About Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+My parents had a website but it was made by my father in something like wordpress so... UI and UX wasn't really friendly and it was looking like taken from 2000 year. Also some things just didnt work.
+It's a one page website so it's pretty simple. There is couple of basic sections like: "About us", "Our dogs", "Exhibitions", "Buying process", "Faq" and of course "Contact".
+My main goal was to make it interesting and vivid. Personally I think that a good website is a website which will drill into your mind for a while.
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Used Technologies
+* React - version 17.0.2
+* React-router-dom - version 5.2.0
+* Styled-components - version 5.3.3
+* Framer-motion - version 4.1.17
+* Email.js - version 3.2.0
+* React-intersection-observer - version 8.32.1
+* React-scroll - version 1.8.4
 
-### `npm run build`
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Images has parallax effect after hovering their parents container
+- There is toggle between different years in "Exhibitions section"
+- Toggle between questions and answers in "Faq section"
+- And of course sending email
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## How to run?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+  git clone https://github.com/BlackAndWhiteCarnage/La-Mia-Passion-Maltese
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Run project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  npm start
+```
 
-### Code Splitting
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Quick Preview
 
-### Analyzing the Bundle Size
+### Home Page
+<img src="./readmeImages/1.png" alt="Home Page" width='100%'/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### About Us
+<img src="./readmeImages/2.png" alt="About Us" width='100%'/>
 
-### Making a Progressive Web App
+### Our Dogs
+<img src="./readmeImages/3.png" alt="Our Dogs" width='100%'/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Exhibitions
+<img src="./readmeImages/4.png" alt="Exhibitions" width='100%'/>
 
-### Advanced Configuration
+### Buying process
+<img src="./readmeImages/5.png" alt="Buying process" width='100%'/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Faq
+<img src="./readmeImages/6.png" alt="Faq" width='100%'/>
 
-### Deployment
+### Contact
+<img src="./readmeImages/7.png" alt="Contact" width='100%'/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br />
 
-### `npm run build` fails to minify
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@BlackAndWhiteCarnage](https://github.com/BlackAndWhiteCarnage)
