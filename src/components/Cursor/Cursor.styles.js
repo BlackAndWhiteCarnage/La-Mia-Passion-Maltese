@@ -18,36 +18,36 @@ export const InvertDiv = styled.div`
   &.section1 {
     width: 50px;
     height: 50px;
-    transition: 2s ease;
+    transition: 0.5s ease;
   }
   &.section2 {
     width: 50px;
-    height: 200vh;
-    transition: 2s ease;
+    height: 100px;
+    transition: 0.5s ease;
   }
   &.section3 {
-    width: 200vw;
+    width: 200px;
     height: 50px;
-    transition: 2s ease;
+    transition: 0.5s ease;
   }
   &.section4 {
     width: 50vw;
     height: 200vh;
-    transition: 2s ease;
+    transition: 0.5s ease;
   }
   &.section5 {
     width: 200vw;
     height: 60vh;
-    transition: 2s ease;
+    transition: 0.5s ease;
   }
   &.section6 {
     width: 70vw;
     height: 200vh;
-    transition: 2s ease;
+    transition: 0.5s ease;
   }
   &.section7 {
     width: 200vw;
     height: 40vh;
-    transition: 2s ease;
+    transition: 0.5s ease;
   }
 `;
