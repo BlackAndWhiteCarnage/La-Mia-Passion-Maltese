@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import Hamburger from 'components/Hamburger/Hamburger';
 import NavigationLinks from 'components/NavigationLinks/NavigationLinks';
 import CurrentSectionInfo from 'components/CurrentSectionInfo/CurrentSectionInfo';
 import SocialMedia from 'components/SocialMedia/SocialMedia';
 import logoIcon from 'assets/icons/logo-icon.svg';
 import { Wrapper, Modal, DarkLayer } from './Navigation.styles';
+import { SectionType } from 'Root'
 
-const Navigation = ({ currentSection }) => {
-  const [toggleModal, setToggleModal] = useState(false);
+interface NavigationProps {
+  currentSection: SectionType["currentSection"]
+}
 
-  const toggleModalHandler = () => {
+export interface ToggleModalType {
+  toggleModal: boolean
+  setToggleModal: React.Dispatch<React.SetStateAction<number>>
+}
+
+const Navigation: React.FC<NavigationProps> = ({ currentSection }) => {
+  const [toggleModal, setToggleModal] = useState<ToggleModalType["toggleModal"]>(false);
+
+  const toggleModalHandler = (): void => {
     setToggleModal(!toggleModal);
   };
 
@@ -27,16 +36,12 @@ const Navigation = ({ currentSection }) => {
         <SocialMedia toggleModal={toggleModal} />
         <NavigationLinks toggleModal={toggleModal} toggleModalHandler={toggleModalHandler} currentSection={currentSection} />
       </Wrapper>
-      <Modal className={toggleModal && 'toggle'} onClick={toggleModalHandler}></Modal>
-      <DarkLayer className={toggleModal && 'toggle'} onClick={toggleModalHandler}>
+      <Modal className={`${toggleModal && 'toggle'}`} onClick={toggleModalHandler} />
+      <DarkLayer className={`${toggleModal && 'toggle'}`} onClick={toggleModalHandler}>
         <img src={logoIcon} alt='La Mia Passione Maltese Logo' />
       </DarkLayer>
     </>
   );
-};
-
-Navigation.propTypes = {
-  currentSection: PropTypes.number.isRequired,
 };
 
 export default Navigation;

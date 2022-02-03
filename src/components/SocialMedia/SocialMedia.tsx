@@ -1,13 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import facebookIcon from 'assets/icons/facebook-icon.svg';
 import emailIcon from 'assets/icons/email-icon.svg';
 import phoneIcon from 'assets/icons/phone-icon.svg';
 import { Wrapper, IconWrapper, Icon } from './SocialMedia.styles';
+import { ToggleModalType } from 'components/Navigation/Navigation'
 
-const SocialMedia = ({ toggleModal }) => {
+interface SocialMediaProps {
+  toggleModal: ToggleModalType["toggleModal"]
+}
+
+const SocialMedia: React.FC<SocialMediaProps> = ({ toggleModal }) => {
   return (
-    <Wrapper className={toggleModal && 'toggle'}>
+    <Wrapper className={`${toggleModal && 'toggle'}`}>
       <IconWrapper
         href='https://www.facebook.com/La-mia-Passione-Maltese-Kasia-Repsch-508000912674823'
         rel='noreferrer'
@@ -24,10 +27,6 @@ const SocialMedia = ({ toggleModal }) => {
       </IconWrapper>
     </Wrapper>
   );
-};
-
-SocialMedia.propTypes = {
-  toggleModal: PropTypes.bool.isRequired,
 };
 
 export default SocialMedia;

@@ -1,9 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Wrapper, AccualHamburger, Line } from './Hamburger.styles';
+import { SectionType } from 'Root'
+import { ToggleModalType } from 'components/Navigation/Navigation'
 
-const Hamburger = ({ toggleModalHandler, toggleModal, currentSection }) => (
-  <Wrapper onClick={toggleModalHandler} className={toggleModal && 'toggle'}>
+interface HamburgerProps {
+  toggleModalHandler: React.MouseEventHandler<HTMLDivElement | HTMLButtonElement>
+  toggleModal: ToggleModalType["toggleModal"]
+  currentSection: SectionType["currentSection"]
+}
+
+const Hamburger: React.FC<HamburgerProps> = ({ toggleModalHandler, toggleModal, currentSection }) => (
+  <Wrapper onClick={toggleModalHandler} className={`${toggleModal && 'toggle'}`}>
     <AccualHamburger onClick={toggleModalHandler}>
       <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} top`}>
         <div />
@@ -22,11 +28,5 @@ const Hamburger = ({ toggleModalHandler, toggleModal, currentSection }) => (
     </AccualHamburger>
   </Wrapper>
 );
-
-Hamburger.propTypes = {
-  toggleModalHandler: PropTypes.func.isRequired,
-  toggleModal: PropTypes.bool.isRequired,
-  currentSection: PropTypes.number.isRequired,
-};
 
 export default Hamburger;

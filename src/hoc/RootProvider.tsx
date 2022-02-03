@@ -1,12 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'assets/styles/theme';
 import Navigation from 'components/Navigation/Navigation';
 import Cursor from 'components/Cursor/Cursor';
+import { SectionType } from 'Root'
 
-const RootProvider = ({ children, currentSection }) => {
+interface RootProviderProps {
+  children: React.ReactNode
+  currentSection: SectionType["currentSection"]
+}
+
+const RootProvider: React.FC<RootProviderProps> = ({ children, currentSection }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -15,11 +19,6 @@ const RootProvider = ({ children, currentSection }) => {
       <Navigation currentSection={currentSection} />
     </ThemeProvider>
   );
-};
-
-RootProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-  currentSection: PropTypes.number.isRequired,
 };
 
 export default RootProvider;

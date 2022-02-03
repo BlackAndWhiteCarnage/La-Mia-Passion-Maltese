@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import RootProvider from 'hoc/RootProvider';
 import Home from 'views/Home/Home';
 import AboutUs from 'views/AboutUs/AboutUs';
@@ -8,8 +8,13 @@ import BuyingProcess from 'views/BuyingProcess/BuyingProcess';
 import Faq from 'views/Faq/Faq';
 import Contact from 'views/Contact/Contact';
 
-function Root() {
-  const [currentSection, setCurrentSection] = useState(0);
+export interface SectionType {
+  currentSection: number
+  setCurrentSection: React.Dispatch<React.SetStateAction<number>>
+}
+
+const Root: React.FC = () => {
+  const [currentSection, setCurrentSection] = useState<SectionType['currentSection']>(0);
 
   return (
     <RootProvider currentSection={currentSection}>
