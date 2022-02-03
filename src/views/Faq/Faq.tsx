@@ -4,8 +4,13 @@ import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import Question from './components/Question';
 import { faqData } from 'data/faqData';
+import { SectionType } from 'Root'
 
-const Faq = ({ setCurrentSection }) => (
+interface FaqProps {
+  setCurrentSection: SectionType["setCurrentSection"]
+}
+
+const Faq: React.FC<FaqProps> = ({ setCurrentSection }) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={6} id='faq' className='white'>
     <SectionItemsWrapper className='overflowHidden'>
       {faqData.map((obj) => (

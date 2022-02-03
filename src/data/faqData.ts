@@ -1,4 +1,9 @@
-export const faqData = [
+type FaqDataType = {
+  question: string
+  answer: string
+}[]
+
+export const faqData: FaqDataType = [
   {
     question: 'Kiedy mogę odebrać pieska?',
     answer: 'Nasze maluszki mogą opuścić dom po ukończeniu 12 tygodni, NIE WCZEŚNIEJ.',

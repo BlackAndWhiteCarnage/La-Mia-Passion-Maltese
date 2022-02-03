@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import ContentChunk from './components/ContentChunk';
@@ -7,8 +6,13 @@ import aboutMeImage1 from 'assets/images/AboutMe1.png';
 import aboutMeImage2 from 'assets/images/AboutMe2.png';
 import aboutMeImage3 from 'assets/images/AboutMe3.png';
 import aboutMeImage4 from 'assets/images/AboutMe4.png';
+import { SectionType } from 'Root'
 
-const AboutUs = ({ setCurrentSection }) => (
+interface AboutUsProps {
+  setCurrentSection: SectionType["setCurrentSection"]
+}
+
+const AboutUs: React.FC<AboutUsProps> = ({ setCurrentSection }) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={2} id='aboutUs'>
     <SectionItemsWrapper>
       <ContentChunk
@@ -36,9 +40,5 @@ const AboutUs = ({ setCurrentSection }) => (
     </SectionItemsWrapper>
   </ContentWrapper>
 );
-
-AboutUs.propTypes = {
-  setCurrentSection: PropTypes.func.isRequired,
-};
 
 export default AboutUs;

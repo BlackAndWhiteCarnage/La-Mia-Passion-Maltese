@@ -1,4 +1,14 @@
-export const year2015 = [
+type ExhibitionType = {
+    dogName: string
+    year: string
+    localization: string
+    exhibitionName: string
+    arbiter: string | null
+    grade: string
+    place: string
+}[]
+
+export const year2015: ExhibitionType = [
   {
     dogName: 'Piccolo Perla',
     year: '11-12.07.2015',
@@ -46,7 +56,7 @@ export const year2015 = [
   },
 ];
 
-export const year2016 = [
+export const year2016: ExhibitionType = [
   {
     dogName: 'Piccolo Perla',
     year: '01.05.2016',
@@ -112,7 +122,7 @@ export const year2016 = [
   },
 ];
 
-export const year2017 = [
+export const year2017: ExhibitionType = [
   {
     dogName: 'Piccolo Perla',
     year: '06.05.2017',
@@ -133,7 +143,7 @@ export const year2017 = [
   },
 ];
 
-export const year2020 = [
+export const year2020: ExhibitionType = [
   {
     dogName: "Bacio D'Amore",
     year: '30.08.2020',

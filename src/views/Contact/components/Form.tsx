@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Wrapper, Label, Input, Textarea, WaitingWrapper } from './Form.styles';
 import Button from 'components/Button/Button';
 import { useForm } from 'helpers/useForm';
 
 const Form = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const {
     sendEmail,
@@ -40,7 +40,7 @@ const Form = () => {
         onChange={messageHandler}
       />
       <Button type='submit' onClick={checkValid} className='form' text='Wyślij' />
-      <WaitingWrapper className={waiting && 'show'}>
+      <WaitingWrapper className={`${waiting && 'show'}`}>
         {!emailSend ? (
           <>
             <div />

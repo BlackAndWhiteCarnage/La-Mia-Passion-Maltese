@@ -1,10 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { templateAnim, letterAnim } from 'assets/animations/animation';
 import { Wrapper, Word, Letter } from './Header.styles';
 import { useScroll } from 'helpers/useScroll';
 
-const Header = ({ text, className, textMobile = text }) => {
+interface HeaderProps {
+  text: string[]
+  className: string
+  textMobile?: string[]
+}
+
+const Header: React.FC<HeaderProps> = ({ text, className, textMobile = text }) => {
   const [element, controls] = useScroll();
 
   const matchMedia = window.matchMedia('(max-width: 680px)').matches;
@@ -20,7 +25,7 @@ const Header = ({ text, className, textMobile = text }) => {
   const titleContact = text.join(' ');
 
   return (
-    <Wrapper className={className} variants={templateAnim} animate={controls} initial='hidden' ref={element}>
+    <Wrapper className={className} variants={templateAnim} animate={controls as any} initial='hidden' ref={element as React.Ref<HTMLDivElement>}>
       <h1>{titleContact}</h1>
       {titleSplit.map((word) => (
         <Word key={`word: ${word}`}>
@@ -33,12 +38,6 @@ const Header = ({ text, className, textMobile = text }) => {
       ))}
     </Wrapper>
   );
-};
-
-Header.propTypes = {
-  text: PropTypes.array.isRequired,
-  textMobile: PropTypes.array,
-  className: PropTypes.string.isRequired,
 };
 
 export default Header;
