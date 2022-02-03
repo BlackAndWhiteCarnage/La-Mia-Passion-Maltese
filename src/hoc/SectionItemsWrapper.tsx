@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -17,13 +16,11 @@ export const Wrapper = styled.div`
   }
 `;
 
-const SectionItemsWrapper = ({ children, className }) => {
-  return <Wrapper className={className}>{children}</Wrapper>;
-};
+interface SectionItemsWrapperProps {
+  children: React.ReactNode
+  className?: string
+}
 
-SectionItemsWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-};
+const SectionItemsWrapper: React.FC<SectionItemsWrapperProps> = ({ children, className }) => <Wrapper className={className}>{children}</Wrapper>
 
 export default SectionItemsWrapper;

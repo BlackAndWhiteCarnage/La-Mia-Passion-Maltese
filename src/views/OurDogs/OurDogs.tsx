@@ -1,5 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import Dog from './components/Dog';
@@ -7,8 +5,14 @@ import DogImage1 from 'assets/images/Dog1.png';
 import DogImage2 from 'assets/images/Dog2.png';
 import DogImage3 from 'assets/images/Dog3.png';
 import DogImage4 from 'assets/images/Dog4.png';
+import { SectionType } from 'Root'
+import React from 'react';
 
-const OurDogs = ({ setCurrentSection }) => (
+interface OurDogsProps {
+  setCurrentSection: SectionType["setCurrentSection"]
+}
+
+const OurDogs: React.FC<OurDogsProps>= ({ setCurrentSection }) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={3} id='ourDogs'>
     <SectionItemsWrapper>
       <Dog
@@ -54,9 +58,5 @@ const OurDogs = ({ setCurrentSection }) => (
     </SectionItemsWrapper>
   </ContentWrapper>
 );
-
-OurDogs.propTypes = {
-  setCurrentSection: PropTypes.func.isRequired,
-};
 
 export default OurDogs;

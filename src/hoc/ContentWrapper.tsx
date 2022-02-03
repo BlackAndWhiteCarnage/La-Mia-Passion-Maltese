@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { SectionType } from 'Root'
 
 export const Wrapper = styled.section`
   position: relative;
@@ -40,7 +40,15 @@ const Threshold = styled.div`
   }
 `;
 
-const ContentWrapper = ({ children, setCurrentSection, sectionIndex, id, className }) => {
+interface ContentWrapperProps {
+  children: React.ReactNode
+  setCurrentSection: SectionType["setCurrentSection"]
+  sectionIndex: number
+  id: string
+  className?: string
+}
+
+const ContentWrapper: React.FC<ContentWrapperProps> = ({ children, setCurrentSection, sectionIndex, id, className }) => {
   const [elem, view] = useInView({ threshold: 1 });
 
   useEffect(() => {
@@ -59,14 +67,6 @@ const ContentWrapper = ({ children, setCurrentSection, sectionIndex, id, classNa
       {children}
     </Wrapper>
   );
-};
-
-ContentWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-  setCurrentSection: PropTypes.func.isRequired,
-  sectionIndex: PropTypes.number.isRequired,
-  id: PropTypes.string.isRequired,
-  className: PropTypes.string,
 };
 
 export default ContentWrapper;

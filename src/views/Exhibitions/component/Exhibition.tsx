@@ -1,14 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Wrapper } from './Exhibition.styles';
 import { useScroll } from 'helpers/useScroll';
 import { fadeAnim } from 'assets/animations/animation';
 
-const Exhibition = ({ props: { dogName, year, localization, exhibitionName, arbiter, grade, place }, index }) => {
+interface ExhibitionProps {
+  props: {
+    dogName: string
+    year: string
+    localization: string
+    exhibitionName: string
+    arbiter: string | null
+    grade: string
+    place: string
+  }
+  index: number
+}
+
+const Exhibition: React.FC<ExhibitionProps> = ({ props: { dogName, year, localization, exhibitionName, arbiter, grade, place }, index }) => {
   const [element, controls] = useScroll();
 
   return (
-    <Wrapper ref={element} variants={fadeAnim} animate={controls} initial='hidden'>
+    <Wrapper ref={element as React.Ref<HTMLDivElement>} variants={fadeAnim} animate={controls as any} initial='hidden'>
       <p>Sunia: {dogName}</p>
       <p>Data: {year}</p>
       <p>{localization}</p>
@@ -19,10 +31,6 @@ const Exhibition = ({ props: { dogName, year, localization, exhibitionName, arbi
       <div>{index + 1}</div>
     </Wrapper>
   );
-};
-
-Exhibition.propTypes = {
-  props: PropTypes.object.isRequired,
 };
 
 export default Exhibition;

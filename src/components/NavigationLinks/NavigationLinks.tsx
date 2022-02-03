@@ -1,9 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { Wrapper, StyledLink } from './NavigationLinks.styles';
+import { SectionType } from 'Root';
+import { ToggleModalType } from 'components/Navigation/Navigation';
 
-const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) => (
-  <Wrapper className={toggleModal && 'toggle'} onClick={toggleModalHandler}>
+interface NavigationLinksProps {
+  toggleModal: ToggleModalType["toggleModal"]
+  toggleModalHandler: React.MouseEventHandler<HTMLDivElement>
+  currentSection: SectionType['currentSection'];
+}
+
+const NavigationLinks: React.FC<NavigationLinksProps> = ({ toggleModal, toggleModalHandler, currentSection }) => (
+  <Wrapper className={`${toggleModal && 'toggle'}`} onClick={toggleModalHandler}>
     <StyledLink
       className={currentSection === 1 && 'isActive'}
       onClick={toggleModalHandler}
@@ -76,11 +82,5 @@ const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }) =>
     </StyledLink>
   </Wrapper>
 );
-
-NavigationLinks.propTypes = {
-  toggleModal: PropTypes.bool.isRequired,
-  toggleModalHandler: PropTypes.func.isRequired,
-  currentSection: PropTypes.number.isRequired,
-};
 
 export default NavigationLinks;
