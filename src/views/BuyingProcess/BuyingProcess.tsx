@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import Step from './components/Step';
@@ -8,7 +9,7 @@ interface BuyingProcessProps {
   setCurrentSection: SectionType["setCurrentSection"]
 }
 
-const BuyingProcess: React.FC<BuyingProcessProps> = ({ setCurrentSection }) => (
+const BuyingProcess: React.FC<BuyingProcessProps> = ({ setCurrentSection }) =>
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={5} id='buyingProcess'>
     <SectionItemsWrapper>
       <Step
@@ -40,6 +41,9 @@ const BuyingProcess: React.FC<BuyingProcessProps> = ({ setCurrentSection }) => (
       />
     </SectionItemsWrapper>
   </ContentWrapper>
-);
+
+BuyingProcess.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
+};
 
 export default BuyingProcess;

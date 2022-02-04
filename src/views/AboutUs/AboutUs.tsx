@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import ContentChunk from './components/ContentChunk';
@@ -40,5 +41,10 @@ const AboutUs: React.FC<AboutUsProps> = ({ setCurrentSection }) => (
     </SectionItemsWrapper>
   </ContentWrapper>
 );
+
+AboutUs.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
+};
+
 
 export default AboutUs;

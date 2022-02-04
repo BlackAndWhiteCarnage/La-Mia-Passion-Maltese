@@ -11,14 +11,13 @@ https://lamiapassionemaltese.pl/
 
 ### About Project
 
-My parents had a website but it was made by my father in something like wordpress so... UI and UX wasn't really friendly and it was looking like taken from 2000 year. Also some things just didnt work.
-It's a one page website so it's pretty simple. There is couple of basic sections like: "About us", "Our dogs", "Exhibitions", "Buying process", "Faq" and of course "Contact".
-My main goal was to make it interesting and vivid. Personally I think that a good website is a website which will drill into your mind for a while.
+My parent's had a website but it was made by my father in something like wordpress so... UI and UX wasn't really friendly and it looked like taken from 2000 year. Also some things just didn't work. It's a one page website so it's pretty simple. There is a couple of basic sections like: "About us", "Our dogs", "Exhibitions", "Buying process", "Faq" and of course "Contact". My main goal was to make it interesting and vivid. Personally I think that a good website is a website which will drill into your mind for a while.
 
 <br />
 
 ## Used Technologies
 * React - version 17.0.2
+* TypeScript - version 4.5.5
 * React-router-dom - version 5.2.0
 * Styled-components - version 5.3.3
 * Framer-motion - version 4.1.17
@@ -31,9 +30,9 @@ My main goal was to make it interesting and vivid. Personally I think that a goo
 ## Features
 
 - Images has parallax effect after hovering their parents container
-- There is toggle between different years in "Exhibitions section"
-- Toggle between questions and answers in "Faq section"
-- And of course sending email
+- Toggle between different years in "Exhibitions section"
+- Toggle answers in "Faq section"
+- Email sending with form validation
 
 
 <br />

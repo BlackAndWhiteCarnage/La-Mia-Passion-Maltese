@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import PropTypes from 'prop-types'
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import Exhibition from './component/Exhibition';
@@ -71,6 +72,10 @@ const Exhibitions: React.FC<ExhibitionsProps> = ({ setCurrentSection }) => {
       </SectionItemsWrapper>
     </ContentWrapper>
   );
+};
+
+Exhibitions.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
 };
 
 export default Exhibitions;

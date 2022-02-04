@@ -1,4 +1,5 @@
 import ContentWrapper from 'hoc/ContentWrapper';
+import PropTypes from 'prop-types';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
 import Dog from './components/Dog';
 import DogImage1 from 'assets/images/Dog1.png';
@@ -58,5 +59,9 @@ const OurDogs: React.FC<OurDogsProps>= ({ setCurrentSection }) => (
     </SectionItemsWrapper>
   </ContentWrapper>
 );
+
+OurDogs.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
+};
 
 export default OurDogs;

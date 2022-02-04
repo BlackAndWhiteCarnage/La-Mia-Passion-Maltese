@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import Header from 'components/Header/Header';
 import { Wrapper, List } from './Step.styles';
 import { fadeAnim } from 'assets/animations/animation';
@@ -20,6 +21,12 @@ const Step: React.FC<StepProps> = ({ text, headerText, list }) => {
       <List>{list && list.map((listItem) => <li>{listItem}</li>)}</List>
     </Wrapper>
   );
+};
+
+Step.propTypes = {
+  text: PropTypes.string.isRequired,
+  headerText: PropTypes.string.isRequired,
+  list: PropTypes.array,
 };
 
 export default Step;

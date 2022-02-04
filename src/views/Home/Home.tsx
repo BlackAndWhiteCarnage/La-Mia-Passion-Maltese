@@ -1,4 +1,5 @@
 import homeImage from 'assets/images/Home.png';
+import PropTypes from 'prop-types';
 import Header from 'components/Header/Header';
 import { homePageImgAnim } from 'assets/animations/animation';
 import { Wrapper, Image } from './Home.styles';
@@ -21,6 +22,10 @@ const Home: React.FC<HomeProps> = ({ setCurrentSection }) => {
       </Wrapper>
     </ContentWrapper>
   );
+};
+
+Home.propTypes = {
+  setCurrentSection: PropTypes.func.isRequired,
 };
 
 export default Home;

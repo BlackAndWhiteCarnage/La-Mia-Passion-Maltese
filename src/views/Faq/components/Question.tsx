@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Wrapper, FaqQuestion, FaqAnswer } from './Question.styles';
 import { useScroll } from 'helpers/useScroll';
 import { fadeAnim } from 'assets/animations/animation';
@@ -27,6 +28,11 @@ const Question: React.FC<QuestionProps> = ({ question, answer }) => {
       <FaqAnswer className={`${toggleAnswer && 'toggle'}`}>{answer}</FaqAnswer>
     </Wrapper>
   );
+};
+
+Question.propTypes = {
+  question: PropTypes.string.isRequired,
+  answer: PropTypes.string.isRequired,
 };
 
 export default Question;

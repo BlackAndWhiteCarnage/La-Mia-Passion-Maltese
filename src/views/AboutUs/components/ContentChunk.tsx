@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types'
 import { fadeAnim, imgAnim } from 'assets/animations/animation';
 import { useScroll } from 'helpers/useScroll';
 import { useMove } from 'helpers/useMove';
@@ -23,6 +24,13 @@ const ContentChunk: React.FC<ContentChunkProps> = ({ text, image, className, num
       <Image src={image} variants={imgAnim} ref={ref} />
     </Wrapper>
   );
+};
+
+ContentChunk.propTypes = {
+  text: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  number: PropTypes.number.isRequired,
 };
 
 export default ContentChunk;

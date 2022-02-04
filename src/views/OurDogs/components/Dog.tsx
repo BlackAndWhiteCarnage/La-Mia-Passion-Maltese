@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import Header from 'components/Header/Header';
 import { fadeAnim } from 'assets/animations/animation';
 import { useScroll } from 'helpers/useScroll';
@@ -7,8 +8,8 @@ import { Wrapper, Content, Image } from './Dog.styles';
 
 interface DogProps {
   className: string
-  headerText: [string, string]
-  textMobile: [string, string]
+  headerText: string[]
+  textMobile: string[]
   text: string
   image: string
 }
