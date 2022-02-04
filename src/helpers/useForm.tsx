@@ -1,16 +1,25 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+
+interface FeedbackType {
+  feedback: boolean | number | null
+  setFeedback: React.Dispatch<React.SetStateAction<null>>
+}
+
+// So I can make interfaces for all of states. But! I think it could be done better cause they are pretty much the same.
+// Just don't know how to do it... yet!
 
 export const useForm = () => {
   const [emailSend, setEmailSend] = useState(false);
   const [validEmail, setValidEmail] = useState(false);
   const [validSubject, setValidSubject] = useState(false);
   const [validMessage, setValidMessage] = useState(false);
-  const [feedback, setFeedback] = useState(null);
   const [waiting, setWaiting] = useState(false);
+  const [feedback, setFeedback] = useState<FeedbackType["feedback"]>(null);
 
-  const emailHandler = (e) => {
+  const emailHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const valid = /\S+@\S+\.\S+/;
+
     if (valid.test(e.target.value)) {
       setValidEmail(true);
     } else {
@@ -18,7 +27,7 @@ export const useForm = () => {
     }
   };
 
-  const subjectHandler = (e) => {
+  const subjectHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
     if (e.target.value.length >= 5) {
       setValidSubject(true);
     } else {
@@ -26,7 +35,7 @@ export const useForm = () => {
     }
   };
 
-  const messageHandler = (e) => {
+  const messageHandler = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     if (e.target.value.length >= 20) {
       setValidMessage(true);
     } else {
@@ -34,7 +43,7 @@ export const useForm = () => {
     }
   };
 
-  function sendEmail(e) {
+  function sendEmail(e: React.FormEvent<HTMLFormElement>): void {
     e.preventDefault();
 
     const serviceID = process.env.REACT_APP_SERVICE_ID;
@@ -43,7 +52,8 @@ export const useForm = () => {
 
     if (validEmail && validMessage && validSubject) {
       setWaiting(true);
-      emailjs.sendForm(`${serviceID}`, `${templateID}`, e.target, `${userID}`).then(
+
+      emailjs.sendForm(`${serviceID}`, `${templateID}`, `${e.target}`, `${userID}`).then(
         (result) => {
           setFeedback(0);
           console.log(result.text);
@@ -57,7 +67,7 @@ export const useForm = () => {
     }
   }
 
-  const checkValid = () => {
+  const checkValid = (): void => {
     if (validEmail && validMessage && validSubject) {
       setFeedback(1);
     } else {
