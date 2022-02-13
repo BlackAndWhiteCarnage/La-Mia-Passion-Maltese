@@ -11,7 +11,7 @@ interface HomeProps {
   setCurrentSection: SectionType["setCurrentSection"]
 }
 
-const Home: React.FC<HomeProps> = ({ setCurrentSection }) => {
+const Home = ({ setCurrentSection }: HomeProps) => {
   const [element, controls] = useScroll();
 
   return (

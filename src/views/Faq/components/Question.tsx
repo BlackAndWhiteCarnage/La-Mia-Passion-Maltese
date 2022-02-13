@@ -14,7 +14,7 @@ interface ToggleAnswerType {
   setToggleAnswer: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Question: React.FC<QuestionProps> = ({ question, answer }) => {
+const Question = ({ question, answer }: QuestionProps) => {
   const [toggleAnswer, setToggleAnswer] = useState<ToggleAnswerType["toggleAnswer"]>(false);
   const [element, controls] = useScroll();
 

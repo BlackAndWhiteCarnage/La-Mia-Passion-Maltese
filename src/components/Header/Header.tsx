@@ -9,7 +9,7 @@ interface HeaderProps {
   textMobile?: string[]
 }
 
-const Header: React.FC<HeaderProps> = ({ text, className, textMobile = text }) => {
+const Header = ({ text, className, textMobile = text }: HeaderProps) => {
   const [element, controls] = useScroll();
 
   const matchMedia = window.matchMedia('(max-width: 680px)').matches;

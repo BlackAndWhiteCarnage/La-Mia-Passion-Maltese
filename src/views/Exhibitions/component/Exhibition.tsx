@@ -16,7 +16,7 @@ interface ExhibitionProps {
   index: number
 }
 
-const Exhibition: React.FC<ExhibitionProps> = ({ props: { dogName, year, localization, exhibitionName, arbiter, grade, place }, index }) => {
+const Exhibition = ({ props: { dogName, year, localization, exhibitionName, arbiter, grade, place }, index }: ExhibitionProps) => {
   const [element, controls] = useScroll();
 
   return (

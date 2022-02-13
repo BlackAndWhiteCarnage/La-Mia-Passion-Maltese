@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types'
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
@@ -9,7 +8,7 @@ interface ContactProps {
   setCurrentSection: SectionType["setCurrentSection"]
 }
 
-const Contact: React.FC<ContactProps> = ({ setCurrentSection }) =>
+const Contact = ({ setCurrentSection }: ContactProps) =>
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={7} id='contact'>
     <SectionItemsWrapper>
       <Form />

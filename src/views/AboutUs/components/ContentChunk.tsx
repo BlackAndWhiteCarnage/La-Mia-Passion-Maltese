@@ -12,7 +12,7 @@ interface ContentChunkProps {
   number: number
 }
 
-const ContentChunk: React.FC<ContentChunkProps> = ({ text, image, className, number }) => {
+const ContentChunk = ({ text, image, className, number }: ContentChunkProps) => {
   const [element, controls] = useScroll();
   const ref = useRef<HTMLImageElement>(null);
   const { handleMove, handleLeave } = useMove(ref);
@@ -29,7 +29,7 @@ const ContentChunk: React.FC<ContentChunkProps> = ({ text, image, className, num
 ContentChunk.propTypes = {
   text: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   number: PropTypes.number.isRequired,
 };
 

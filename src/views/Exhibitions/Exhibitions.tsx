@@ -32,7 +32,7 @@ interface ToggleTypes {
   setToggle: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Exhibitions: React.FC<ExhibitionsProps> = ({ setCurrentSection }) => {
+const Exhibitions = ({ setCurrentSection }: ExhibitionsProps) => {
   const [data, setData] = useState<DataTypes["data"]>(year2015);
   const [toggle, setToggle] = useState<ToggleTypes["toggle"]>(true);
   const ref2 = useRef<HTMLDivElement>(null);

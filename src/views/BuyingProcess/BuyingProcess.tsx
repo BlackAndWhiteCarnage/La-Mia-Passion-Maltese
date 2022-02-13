@@ -9,7 +9,7 @@ interface BuyingProcessProps {
   setCurrentSection: SectionType["setCurrentSection"]
 }
 
-const BuyingProcess: React.FC<BuyingProcessProps> = ({ setCurrentSection }) =>
+const BuyingProcess = ({ setCurrentSection }: BuyingProcessProps) =>
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={5} id='buyingProcess'>
     <SectionItemsWrapper>
       <Step

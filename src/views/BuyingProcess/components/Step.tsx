@@ -11,14 +11,14 @@ interface StepProps {
   list?: string[]
 }
 
-const Step: React.FC<StepProps> = ({ text, headerText, list }) => {
+const Step = ({ text, headerText, list }: StepProps) => {
   const [element, controls] = useScroll();
 
   return (
     <Wrapper variants={fadeAnim} animate={controls as any} initial='hidden' ref={element as React.Ref<HTMLDivElement>}>
       <Header text={[headerText]} className='xl large static' />
       {text}
-      <List>{list && list.map((listItem) => <li>{listItem}</li>)}</List>
+      <List>{list && list.map((listItem) => <li key={listItem}>{listItem}</li>)}</List>
     </Wrapper>
   );
 };

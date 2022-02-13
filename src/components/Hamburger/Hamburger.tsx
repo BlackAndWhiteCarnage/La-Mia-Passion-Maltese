@@ -8,7 +8,7 @@ interface HamburgerProps {
   currentSection: SectionType["currentSection"]
 }
 
-const Hamburger: React.FC<HamburgerProps> = ({ toggleModalHandler, toggleModal, currentSection }) => (
+const Hamburger = ({ toggleModalHandler, toggleModal, currentSection }: HamburgerProps) => (
   <Wrapper onClick={toggleModalHandler} className={`${toggleModal && 'toggle'}`}>
     <AccualHamburger onClick={toggleModalHandler}>
       <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} top`}>

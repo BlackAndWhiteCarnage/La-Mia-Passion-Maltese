@@ -5,7 +5,7 @@ interface CurrentSectionInfoProps {
   currentSection: SectionType["currentSection"]
 }
 
-const CurrentSectionInfo: React.FC<CurrentSectionInfoProps> = ({ currentSection }) => (
+const CurrentSectionInfo = ({ currentSection }: CurrentSectionInfoProps) => (
   <Wrapper>
     <InfoWrapper>
       <CurrentSection className={`${currentSection === 1 && 'show'}`}>Strona Główna</CurrentSection>

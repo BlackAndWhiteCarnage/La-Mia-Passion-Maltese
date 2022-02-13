@@ -8,7 +8,7 @@ interface NavigationLinksProps {
   currentSection: SectionType['currentSection'];
 }
 
-const NavigationLinks: React.FC<NavigationLinksProps> = ({ toggleModal, toggleModalHandler, currentSection }) => (
+const NavigationLinks = ({ toggleModal, toggleModalHandler, currentSection }: NavigationLinksProps) => (
   <Wrapper className={`${toggleModal && 'toggle'}`} onClick={toggleModalHandler}>
     <StyledLink
       className={currentSection === 1 && 'isActive'}

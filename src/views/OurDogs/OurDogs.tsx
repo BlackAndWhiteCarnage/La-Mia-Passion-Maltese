@@ -7,13 +7,12 @@ import DogImage2 from 'assets/images/Dog2.png';
 import DogImage3 from 'assets/images/Dog3.png';
 import DogImage4 from 'assets/images/Dog4.png';
 import { SectionType } from 'Root'
-import React from 'react';
 
 interface OurDogsProps {
   setCurrentSection: SectionType["setCurrentSection"]
 }
 
-const OurDogs: React.FC<OurDogsProps>= ({ setCurrentSection }) => (
+const OurDogs = ({ setCurrentSection }: OurDogsProps) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={3} id='ourDogs'>
     <SectionItemsWrapper>
       <Dog

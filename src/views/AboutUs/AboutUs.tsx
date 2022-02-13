@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types'
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
@@ -13,7 +12,7 @@ interface AboutUsProps {
   setCurrentSection: SectionType["setCurrentSection"]
 }
 
-const AboutUs: React.FC<AboutUsProps> = ({ setCurrentSection }) => (
+const AboutUs = ({ setCurrentSection }: AboutUsProps) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={2} id='aboutUs'>
     <SectionItemsWrapper>
       <ContentChunk

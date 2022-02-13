@@ -16,7 +16,7 @@ export interface ToggleModalType {
   setToggleModal: React.Dispatch<React.SetStateAction<number>>
 }
 
-const Navigation: React.FC<NavigationProps> = ({ currentSection }) => {
+const Navigation = ({ currentSection }: NavigationProps) => {
   const [toggleModal, setToggleModal] = useState<ToggleModalType["toggleModal"]>(false);
 
   const toggleModalHandler = (): void => {

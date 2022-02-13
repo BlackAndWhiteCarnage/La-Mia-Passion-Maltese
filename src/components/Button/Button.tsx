@@ -1,13 +1,18 @@
 import { Wrapper } from './Button.styles';
+import { SectionType } from 'Root'
 
-interface ButtonProps {
+export interface CurrentSectionInfoProps {
+    currentSection: SectionType["currentSection"]
+}
+
+export interface ButtonProps {
   text: string
   className: string
   onClick: () => void
   type?: 'submit'
 }
 
-const Button: React.FC<ButtonProps> = ({ text, className, onClick, type }) =>
+const Button = ({ text, className, onClick, type }: ButtonProps) =>
   <Wrapper className={className} onClick={onClick} type={type}>
     {text}
   </Wrapper>

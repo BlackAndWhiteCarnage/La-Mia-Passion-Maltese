@@ -8,7 +8,7 @@ interface SocialMediaProps {
   toggleModal: ToggleModalType["toggleModal"]
 }
 
-const SocialMedia: React.FC<SocialMediaProps> = ({ toggleModal }) => {
+const SocialMedia = ({ toggleModal }: SocialMediaProps) => {
   return (
     <Wrapper className={`${toggleModal && 'toggle'}`}>
       <IconWrapper

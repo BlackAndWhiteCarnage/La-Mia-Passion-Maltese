@@ -13,7 +13,7 @@ export interface SectionType {
   setCurrentSection: React.Dispatch<React.SetStateAction<number>>
 }
 
-const Root: React.FC = () => {
+const Root = () => {
   const [currentSection, setCurrentSection] = useState<SectionType['currentSection']>(0);
 
   return (

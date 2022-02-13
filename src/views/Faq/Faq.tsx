@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import ContentWrapper from 'hoc/ContentWrapper';
 import SectionItemsWrapper from 'hoc/SectionItemsWrapper';
@@ -10,7 +9,7 @@ interface FaqProps {
   setCurrentSection: SectionType["setCurrentSection"]
 }
 
-const Faq: React.FC<FaqProps> = ({ setCurrentSection }) => (
+const Faq = ({ setCurrentSection }: FaqProps) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={6} id='faq' className='white'>
     <SectionItemsWrapper className='overflowHidden'>
       {faqData.map((obj) => (

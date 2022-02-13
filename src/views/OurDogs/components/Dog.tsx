@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
 import Header from 'components/Header/Header';
 import { fadeAnim } from 'assets/animations/animation';
 import { useScroll } from 'helpers/useScroll';
@@ -14,7 +13,7 @@ interface DogProps {
   image: string
 }
 
-const Dog: React.FC<DogProps> = ({ className, headerText, textMobile, text, image }) => {
+const Dog = ({ className, headerText, textMobile, text, image }: DogProps) => {
   const [element, controls] = useScroll();
   const ref = useRef<HTMLImageElement>(null);
   const { handleMove, handleLeave } = useMove(ref);

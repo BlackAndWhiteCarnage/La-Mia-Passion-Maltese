@@ -6,7 +6,7 @@ interface CursorProps {
   currentSection: SectionType["currentSection"]
 }
 
-const Cursor: React.FC<CursorProps> = ({ currentSection }) => {
+const Cursor = ({ currentSection }: CursorProps) => {
   const [isTouchscreen, setIsTouchscreen] = useState<null | boolean>(null);
   const ref = useRef<HTMLDivElement>(null);
 
