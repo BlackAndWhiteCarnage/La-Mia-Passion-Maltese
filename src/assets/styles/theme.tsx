@@ -1,22 +1,6 @@
-type ThemeType = {
-  colors: {
-    white: string,
-    black: string,
-    darkGrey: string
-  },
-  fontSize: {
-    xxl: string,
-    xl: string,
-    l: string,
-    m: string,
-    s: string,
-    xs: string
-    xxs: string
-  }
-}
+import { DefaultTheme } from 'styled-components'
 
-
-export const theme: ThemeType = {
+export const theme: DefaultTheme = {
   colors: {
     white: '#EEEEEE',
     black: '#090909',

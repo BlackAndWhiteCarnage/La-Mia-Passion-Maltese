@@ -15,19 +15,20 @@ export const InvertDiv = styled.div`
   transform-origin: 135% 135%;
   backdrop-filter: invert(100%);
   transition: 2s ease;
+  display: none;
   &.section1 {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     transition: 0.5s ease;
   }
   &.section2 {
-    width: 50px;
-    height: 100px;
+    width: 300px;
+    height: 5px;
     transition: 0.5s ease;
   }
   &.section3 {
-    width: 200px;
-    height: 50px;
+    width: 200vw;
+    height: 5px;
     transition: 0.5s ease;
   }
   &.section4 {
