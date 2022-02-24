@@ -36,7 +36,7 @@ const Navigation = ({ currentSection }: NavigationProps) => {
         <SocialMedia toggleModal={toggleModal} />
         <NavigationLinks toggleModal={toggleModal} toggleModalHandler={toggleModalHandler} currentSection={currentSection} />
       </Wrapper>
-      <Modal className={`${toggleModal && 'toggle'}`} onClick={toggleModalHandler} />
+      <Modal className={`${toggleModal && 'toggle'}`} onClick={toggleModalHandler} data-testid='modal'/>
       <DarkLayer className={`${toggleModal && 'toggle'}`} onClick={toggleModalHandler}>
         <img src={logoIcon} alt='La Mia Passione Maltese Logo' />
       </DarkLayer>

@@ -10,7 +10,7 @@ interface HamburgerProps {
 
 const Hamburger = ({ toggleModalHandler, toggleModal, currentSection }: HamburgerProps) => (
   <Wrapper onClick={toggleModalHandler} className={`${toggleModal && 'toggle'}`}>
-    <AccualHamburger onClick={toggleModalHandler}>
+    <AccualHamburger onClick={toggleModalHandler} title='Rozwiń/Zamknij menu'>
       <Line className={`${toggleModal && 'toggle'} ${currentSection === 4 ? 'white' : currentSection === 6 && 'white'} top`}>
         <div />
         <div />

@@ -15,7 +15,6 @@ export const InvertDiv = styled.div`
   transform-origin: 135% 135%;
   backdrop-filter: invert(100%);
   transition: 2s ease;
-  display: none;
   &.section1 {
     width: 20px;
     height: 20px;
