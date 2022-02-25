@@ -10,10 +10,11 @@ export interface ButtonProps {
   className: string
   onClick: () => void
   type?: 'submit'
+  title?: string
 }
 
-const Button = ({ text, className, onClick, type }: ButtonProps) =>
-  <Wrapper className={className} onClick={onClick} type={type}>
+const Button = ({ text, className, onClick, type, title }: ButtonProps) =>
+  <Wrapper className={className} onClick={onClick} type={type} title={title}>
     {text}
   </Wrapper>
 

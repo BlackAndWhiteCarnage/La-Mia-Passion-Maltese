@@ -40,9 +40,7 @@ const Exhibitions = ({ setCurrentSection }: ExhibitionsProps) => {
   const changeDataHandler = (newData: DataTypes["data"]): void => {
     setToggle(false);
 
-    setTimeout(() => {
-      setData(newData);
-    }, 500);
+    setData(newData);
 
     if(ref2.current){
       ref2.current.scrollIntoView({
@@ -50,9 +48,7 @@ const Exhibitions = ({ setCurrentSection }: ExhibitionsProps) => {
       });
     }
 
-    setTimeout(() => {
       setToggle(true);
-    }, 500);
   };
 
   return (

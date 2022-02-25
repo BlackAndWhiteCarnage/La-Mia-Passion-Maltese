@@ -20,7 +20,7 @@ const Exhibition = ({ props: { dogName, year, localization, exhibitionName, arbi
   const [element, controls] = useScroll();
 
   return (
-    <Wrapper ref={element as React.Ref<HTMLDivElement>} variants={fadeAnim} animate={controls as any} initial='hidden'>
+    <Wrapper ref={element as React.Ref<HTMLDivElement>} variants={fadeAnim} animate={controls as any} initial='hidden' data-testid='exhibition'>
       <p>Sunia: {dogName}</p>
       <p>Data: {year}</p>
       <p>{localization}</p>
