@@ -29,7 +29,7 @@ const Form = () => {
         className={`${feedback === 2 && !validSubject && 'ERROR'} ${validSubject && 'VALID'}`}
         onChange={subjectHandler}
       />
-      <Label htmlFor='email'>Emial</Label>
+      <Label htmlFor='email'>Email</Label>
       <Input id='email' name='email' className={`${feedback === 2 && !validEmail && 'ERROR'} ${validEmail && 'VALID'}`} onChange={emailHandler} />
       <Label htmlFor='message'>Wiadomość</Label>
       <Textarea

@@ -8,13 +8,11 @@ import { year2015, year2020 } from 'data/exhibitionsData'
 
 window.HTMLElement.prototype.scrollIntoView = jest.fn()
 
-const MockExhibitions = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Exhibitions setCurrentSection={() => {}} />
-    </ThemeProvider>
-  );
-};
+const MockExhibitions = () => (
+  <ThemeProvider theme={theme}>
+    <Exhibitions setCurrentSection={() => {}} />
+  </ThemeProvider>
+);
 
 describe('Exhibitions', () => {
     it('shoud render year2015 exhibitions at first', () => {
@@ -29,4 +27,4 @@ describe('Exhibitions', () => {
       const exhibitionElements = screen.getAllByTestId('exhibition');
       expect(exhibitionElements.length).toBe(year2020.length)
     });
-  });
+});

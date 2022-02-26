@@ -6,15 +6,13 @@ import { ThemeProvider } from 'styled-components';
 import { theme } from 'assets/styles/theme';
 import { faqData } from 'data/faqData';
 
-const MockQuestion = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      {faqData.map(({question, answer}) => (
-        <Question  question={question} answer={answer} />
-      ))}
-    </ThemeProvider>
-  );
-};
+const MockQuestion = () => (
+  <ThemeProvider theme={theme}>
+    {faqData.map(({ question, answer }) => (
+      <Question  question={question} answer={answer} key={question}/>
+    ))}
+  </ThemeProvider>
+)
 
 const getAllQuestions = (isDubleClick: boolean) => {
   faqData.forEach(({ question, answer }) => {

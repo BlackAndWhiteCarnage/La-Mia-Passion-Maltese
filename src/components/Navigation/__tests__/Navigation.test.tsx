@@ -4,13 +4,11 @@ import Navigation from '../Navigation';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'assets/styles/theme';
 
-const MockNavigation = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Navigation currentSection={1} />
-    </ThemeProvider>
-  );
-};
+const MockNavigation = () => (
+  <ThemeProvider theme={theme}>
+    <Navigation currentSection={1} />
+  </ThemeProvider>
+);
 
 describe('Navigation', () => {
   it('shoud modal be closed after render', () => {

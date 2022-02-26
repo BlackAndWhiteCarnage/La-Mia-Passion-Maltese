@@ -13,7 +13,7 @@ const Faq = ({ setCurrentSection }: FaqProps) => (
   <ContentWrapper setCurrentSection={setCurrentSection} sectionIndex={6} id='faq' className='white'>
     <SectionItemsWrapper className='overflowHidden'>
       {faqData.map((obj) => (
-        <Question key={obj.question} {...obj} />
+        <Question key={obj.question} {...obj}/>
       ))}
     </SectionItemsWrapper>
   </ContentWrapper>
