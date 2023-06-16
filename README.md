@@ -1,4 +1,8 @@
-<img src="https://user-images.githubusercontent.com/71930296/236704199-c10fd539-86e6-4bdf-b743-3e46ece9e3b0.svg" alt="" width='100%'/>
+<img src="https://github.com/BlackAndWhiteCarnage/La-Mia-Passion-Maltese/assets/71930296/21926002-b433-4e94-8a86-d80255e476b9" alt="" width='100%'/>
+
+<br />
+<br />
+
 <img src="./src/assets/icons/logo-icon.svg" alt="La Mia Passione Maltese logo" width='100%'/>
 
 <br />
